@@ -187,6 +187,10 @@ The latest supplied Colab evidence was inspected, packaged under `results/ibm_ha
 
 Validation for packaging: source ZIP SHA-256 and its contents verified, notebook JSON and Python code cells parsed, secrets scan clean, all local README/report links resolved, and the existing pytest suite run without rerunning benchmarks or QPU jobs. The public GitHub repository history must not include the local `data/raw/` source files; publication uses a sanitized snapshot so prior local commits and accepted computational history remain intact locally.
 
+## CI test-data correction (2026-11-12)
+
+GitHub Actions run 43131154777 failed because 15 tests attempted to read `data/raw/bank_campaign_participant_release.xlsx`, which is intentionally excluded from the sanitized public repository. The workflow dependency installation and `pip check` succeeded. Tests now build a temporary synthetic workbook with the required Stage 1 and Stage 2 sheet schemas, so CI exercises the real loaders and downstream logic without requiring or redistributing challenge data. The synthetic records are test fixtures only and are not experiment evidence. Local verification on the exact sanitized snapshot: `python -m pytest -q` — 61 passed in 14.50 seconds.
+
 ## README and research-report design refresh (2026-11-12)
 
 Following review feedback, the public-facing README was redesigned with embedded saved Stage 1 model/calibration, Stage 2 shortlist/QAOA, Stage 3 distribution, and IBM synthetic-QAOA figures. docs/README.md, reports/README.md, and results/README.md now provide concise navigation and explain which files are final, diagnostic, superseded, or corrected. The research PDF was redesigned as a nine-page A4 report with larger typography, consistent spacing and section hierarchy, clearer figure captions, a dedicated ROC/PR-calibration page, and separated actual-pool simulation and synthetic hardware results. It was regenerated solely from existing verified result artifacts; no models, optimizers, Aer, or IBM jobs were run. All nine rendered pages were inspected. Final PDF SHA-256: cd7502169c1cc2019c0f964d1109a27f2fafc72a249ae201743187889b7c2d0e.

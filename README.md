@@ -75,10 +75,10 @@ py -3.12 -m venv .venv
 .venv\Scripts\python.exe -m pytest -q
 </pre>
 
-The final local test run passed **61 tests**. See the [reproducibility guide](docs/reproducibility.md) for experiment commands and [results guide](results/README.md) for authoritative outputs. The notebook is [available here](notebooks/atomiq_ibm_hardware_experiments_QAOA_HARDWARE_EXPANDED.ipynb); hardware submission is disarmed by default.
+The test suite passed **61 tests**. Tests use generated temporary fixtures and run without the restricted challenge workbook; rerunning the data-dependent benchmark still requires authorized access to the source workbook. See the [reproducibility guide](docs/reproducibility.md) for experiment commands and [results guide](results/README.md) for authoritative outputs. The notebook is [available here](notebooks/atomiq_ibm_hardware_experiments_QAOA_HARDWARE_EXPANDED.ipynb); hardware submission is disarmed by default.
 
 ## Data access and limits
 
-The original challenge PDF and participant workbook are deliberately absent from this public repository because redistribution permission has not been established. Obtain them through the authorized competition channel and place them under data/raw/ for data-dependent reproduction. The code and saved results do not include test labels or label-derived aggregate totals.
+The original challenge PDF and participant workbook are deliberately absent from this public repository because redistribution permission has not been established. Obtain them through the authorized competition channel and place them under data/raw/ for data-dependent experiment reproduction. The pytest suite does not read that workbook: it creates small synthetic temporary workbooks for schema and objective tests. The code and saved results do not include test labels or label-derived aggregate totals.
 
 Stage 1 is based on only 300 labeled rows and 35 positive cases. Stage 2 is exact only for its frozen shortlist and supplied probabilities. The final shortlist does not test binding resource constraints. The challenge QAOA fit was budget-limited; the hardware QAOA problem is synthetic. Stage 3 assumes independent outcomes. These results do not demonstrate quantum advantage.

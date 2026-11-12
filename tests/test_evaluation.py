@@ -17,15 +17,15 @@ from atomiq.metrics import evaluate_probabilities
 from atomiq.schema import load_training_data
 
 
-def test_outer_repeated_folds_share_each_customer_once_per_repeat():
-    data = load_training_data("data/raw/bank_campaign_participant_release.xlsx")
+def test_outer_repeated_folds_share_each_customer_once_per_repeat(synthetic_workbook):
+    data = load_training_data(synthetic_workbook)
     folds = make_outer_splits(data.target, seed=42, n_splits=3, n_repeats=2)
     assert len(folds) == 6
     for repeat in (1, 2):
         validation_indices = [valid for r, _, _, valid in folds if r == repeat]
-        assert all(len(indices) == 100 for indices in validation_indices)
+        assert all(len(indices) == 20 for indices in validation_indices)
         assert sorted(index for indices in validation_indices for index in indices) == list(
-            range(300)
+            range(60)
         )
 
 
@@ -44,8 +44,8 @@ def test_compact_search_still_compares_unweighted_and_balanced_candidates():
     }
 
 
-def test_monotone_sigmoid_calibration_cannot_reverse_probability_ranking():
-    data = load_training_data("data/raw/bank_campaign_participant_release.xlsx")
+def test_monotone_sigmoid_calibration_cannot_reverse_probability_ranking(synthetic_workbook):
+    data = load_training_data(synthetic_workbook)
     estimator = clone(
         next(s.estimator for s in build_model_portfolio(42) if s.name == "random_forest")
     )
@@ -63,8 +63,8 @@ def test_monotone_sigmoid_calibration_cannot_reverse_probability_ranking():
     )
 
 
-def test_calibration_preserves_logistic_ranking_when_raw_scores_saturate():
-    data = load_training_data("data/raw/bank_campaign_participant_release.xlsx")
+def test_calibration_preserves_logistic_ranking_when_raw_scores_saturate(synthetic_workbook):
+    data = load_training_data(synthetic_workbook)
     estimator = clone(
         next(
             s.estimator
@@ -72,8 +72,8 @@ def test_calibration_preserves_logistic_ranking_when_raw_scores_saturate():
             if s.name == "logistic_unregularized"
         )
     )
-    train_indices = list(range(200))
-    validation_indices = list(range(200, 300))
+    train_indices = list(range(40))
+    validation_indices = list(range(40, 60))
     train_x, train_y = data.features.iloc[train_indices], data.target.iloc[train_indices]
     valid_x, valid_y = data.features.iloc[validation_indices], data.target.iloc[validation_indices]
     inner_splits = list(
@@ -99,8 +99,8 @@ def test_calibration_preserves_logistic_ranking_when_raw_scores_saturate():
     assert mapped_metrics["pr_auc"] == raw_metrics["pr_auc"]
 
 
-def test_small_nested_run_writes_only_training_oof_predictions(tmp_path):
-    data = load_training_data("data/raw/bank_campaign_participant_release.xlsx")
+def test_small_nested_run_writes_only_training_oof_predictions(tmp_path, synthetic_workbook):
+    data = load_training_data(synthetic_workbook)
     result = run_nested_repeated_cv(
         data,
         EvaluationConfig(
@@ -121,12 +121,12 @@ def test_small_nested_run_writes_only_training_oof_predictions(tmp_path):
 
     predictions = pd.read_csv(tmp_path / "oof_predictions.csv")
     manifest = json.loads((tmp_path / "run_manifest.json").read_text(encoding="utf-8"))
-    assert len(predictions) == 1800
+    assert len(predictions) == 360
     assert set(predictions["customer_id"]) == set(data.customer_ids)
     assert set(predictions["prediction_type"]) == {"raw", "sigmoid_calibrated"}
     assert manifest["test_sheet_read"] is False
     assert manifest["test_prediction_generated"] is False
-    assert result["training_rows"] == 300
+    assert result["training_rows"] == 60
     trials = pd.read_csv(tmp_path / "tuning_trials.csv")
     regularized_trials = trials.loc[trials["model"] == "logistic_regularized"]
     weights = {

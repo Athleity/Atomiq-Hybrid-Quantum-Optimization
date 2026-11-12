@@ -1,5 +1,3 @@
-from pathlib import Path
-
 import pandas as pd
 
 import atomiq.schema as schema
@@ -10,20 +8,17 @@ from atomiq.schema import (
 )
 
 
-WORKBOOK = Path("data/raw/bank_campaign_participant_release.xlsx")
-
-
-def test_training_loader_uses_expected_schema_and_only_training_labels():
-    data = load_training_data(WORKBOOK)
-    assert len(data.target) == 300
-    assert int(data.target.sum()) == 35
-    assert int((data.target == 0).sum()) == 265
+def test_training_loader_uses_expected_schema_and_only_training_labels(synthetic_workbook):
+    data = load_training_data(synthetic_workbook)
+    assert len(data.target) == 60
+    assert int(data.target.sum()) == 12
+    assert int((data.target == 0).sum()) == 48
     assert data.customer_ids.is_unique
     assert tuple(data.features.columns) == (*NUMERIC_FEATURES, *CATEGORICAL_FEATURES)
 
 
-def test_identifier_target_and_duration_are_not_predictors():
-    data = load_training_data(WORKBOOK)
+def test_identifier_target_and_duration_are_not_predictors(synthetic_workbook):
+    data = load_training_data(synthetic_workbook)
     assert "customer_id" not in data.features.columns
     assert "y" not in data.features.columns
     assert "duration" not in data.features.columns
