@@ -43,18 +43,35 @@ The model tournament used only the 300 labeled rows in `Stage1_Train` (35 positi
 
 Numbers are means across nine outer validation folds; parentheses are fold standard deviations, not confidence intervals. `PR-AUC` means average precision. Calibration does not change top-ten membership for the selected CatBoost model.
 
-| Model | ROC-AUC | PR-AUC / AP | Precision@10 | Recall@10 | Brier raw -> calibrated | Log loss raw -> calibrated | ECE raw -> calibrated |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| CatBoost native categories | 0.656 (0.064) | 0.242 (0.057) | 0.189 | 0.162 | 0.152 -> 0.101 | 0.477 -> 0.353 | 0.183 -> 0.018 |
-| Linear SVM | 0.594 (0.058) | 0.236 (0.078) | 0.211 | 0.181 | 0.159 -> 0.104 | 0.529 -> 0.362 | 0.181 -> 0.017 |
-| RBF SVM | 0.599 (0.095) | 0.233 (0.068) | 0.211 | 0.182 | 0.147 -> 0.104 | 0.474 -> 0.364 | 0.187 -> 0.021 |
-| Random Forest | 0.608 (0.089) | 0.228 (0.068) | 0.211 | 0.181 | 0.136 -> 0.103 | 0.444 -> 0.359 | 0.135 -> 0.022 |
-| LightGBM | 0.590 (0.083) | 0.220 (0.076) | 0.178 | 0.153 | 0.139 -> 0.103 | 0.500 -> 0.358 | 0.143 -> 0.024 |
-| Regularized logistic | 0.564 (0.049) | 0.219 (0.063) | 0.211 | 0.181 | 0.155 -> 0.103 | 0.580 -> 0.359 | 0.163 -> 0.025 |
-| Extra Trees | 0.579 (0.067) | 0.218 (0.084) | 0.189 | 0.162 | 0.114 -> 0.104 | 0.555 -> 0.364 | 0.093 -> 0.023 |
-| HistGradientBoosting | 0.591 (0.065) | 0.216 (0.074) | 0.178 | 0.152 | 0.145 -> 0.102 | 0.504 -> 0.356 | 0.145 -> 0.021 |
-| Unregularized logistic | 0.556 (0.037) | 0.202 (0.052) | 0.189 | 0.162 | 0.148 -> 0.104 | 1.224 -> 0.364 | 0.158 -> 0.028 |
-| Prior baseline | 0.500 (0.000) | 0.117 (0.005) | 0.122 | 0.102 | 0.103 -> 0.103 | 0.360 -> 0.360 | 0.007 -> 0.007 |
+**Ranking and top-list performance**
+
+| Model | ROC-AUC, mean (fold SD) | Average precision, mean (fold SD) | Precision@10 | Recall@10 |
+|---|---:|---:|---:|---:|
+| CatBoost native categories | 0.656 (0.064) | 0.242 (0.057) | 0.189 | 0.162 |
+| Linear SVM | 0.594 (0.058) | 0.236 (0.078) | 0.211 | 0.181 |
+| RBF SVM | 0.599 (0.095) | 0.233 (0.068) | 0.211 | 0.182 |
+| Random Forest | 0.608 (0.089) | 0.228 (0.068) | 0.211 | 0.181 |
+| LightGBM | 0.590 (0.083) | 0.220 (0.076) | 0.178 | 0.153 |
+| Regularized logistic | 0.564 (0.049) | 0.219 (0.063) | 0.211 | 0.181 |
+| Extra Trees | 0.579 (0.067) | 0.218 (0.084) | 0.189 | 0.162 |
+| HistGradientBoosting | 0.591 (0.065) | 0.216 (0.074) | 0.178 | 0.152 |
+| Unregularized logistic | 0.556 (0.037) | 0.202 (0.052) | 0.189 | 0.162 |
+| Prior baseline | 0.500 (0.000) | 0.117 (0.005) | 0.122 | 0.102 |
+
+**Probability quality: raw -> sigmoid-calibrated means**
+
+| Model | Brier | Log loss | 10-bin ECE |
+|---|---:|---:|---:|
+| CatBoost native categories | 0.152 -> 0.101 | 0.477 -> 0.353 | 0.183 -> 0.018 |
+| Linear SVM | 0.159 -> 0.104 | 0.529 -> 0.362 | 0.181 -> 0.017 |
+| RBF SVM | 0.147 -> 0.104 | 0.474 -> 0.364 | 0.187 -> 0.021 |
+| Random Forest | 0.136 -> 0.103 | 0.444 -> 0.359 | 0.135 -> 0.022 |
+| LightGBM | 0.139 -> 0.103 | 0.500 -> 0.358 | 0.143 -> 0.024 |
+| Regularized logistic | 0.155 -> 0.103 | 0.580 -> 0.359 | 0.163 -> 0.025 |
+| Extra Trees | 0.114 -> 0.104 | 0.555 -> 0.364 | 0.093 -> 0.023 |
+| HistGradientBoosting | 0.145 -> 0.102 | 0.504 -> 0.356 | 0.145 -> 0.021 |
+| Unregularized logistic | 0.148 -> 0.104 | 1.224 -> 0.364 | 0.158 -> 0.028 |
+| Prior baseline | 0.103 -> 0.103 | 0.360 -> 0.360 | 0.007 -> 0.007 |
 
 **How to read this:** average precision is the main model-selection score because the positive class is rare. CatBoost ranks first on mean AP, but its 0.006 lead over linear SVM is small against the fold-to-fold SDs. The ranking is not a formal significance test. Precision@10 answers a different operational question: among the ten highest-ranked validation customers in each fold, what fraction are positive? Linear/RBF SVM, Random Forest, and regularized logistic have the strongest mean Precision@10 (0.211), despite lower overall AP. Choose the model metric based on the deployment objective, not one headline number.
 
@@ -66,7 +83,15 @@ ROC-AUC measures pairwise ranking across thresholds; PR-AUC/AP is sensitive to p
 
 The saved positive-slope sigmoid mapping is monotone, so it cannot reverse customer ranking. For CatBoost, calibration improved mean Brier by 0.051, log loss by 0.124, and 10-bin ECE by 0.165. These are substantial aggregate reliability improvements on outer validation folds, but only about 11-12 positives occur per 100-row validation fold. The calibration intercept/slope and reliability bins show residual instability/domain shift. Preserve raw and calibrated probabilities and treat the downstream probabilities as estimates, not truth.
 
-A later eight-candidate CatBoost/LightGBM screen ran on the same folds. Expanded CatBoost AP was 0.243 (SD 0.069), ROC-AUC 0.614, Precision@10 0.244, Brier 0.102 and log loss 0.357. Against the original CatBoost result, AP increased only 0.0015 and Precision@10 increased 0.0556, while ROC-AUC decreased 0.0410 and Brier/log loss became slightly worse; AP improved in only 4 of 9 folds. Expanded LightGBM AP was 0.221. This search did not establish a better or robust model, so the original CatBoost remains the provisional reference.
+A later eight-candidate CatBoost/LightGBM screen ran on the same folds:
+
+| CatBoost run | ROC-AUC | AP | Precision@10 | Calibrated Brier | Calibrated log loss | AP fold SD | AP folds improved |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Original search | 0.655538 | 0.241709 | 0.188889 | 0.101247 | 0.352610 | 0.057388 | Reference |
+| Expanded search | 0.614497 | 0.243207 | 0.244444 | 0.102220 | 0.356577 | 0.068689 | 4 of 9 |
+| Difference | -0.041041 | +0.001498 | +0.055555 | +0.000973 | +0.003967 | +0.011301 | — |
+
+Expanded LightGBM AP was 0.220799. This search did not establish a better or robust model, so the original CatBoost remains the provisional reference.
 
 The final frozen model is CatBoost with `iterations=140`, `depth=5`, `learning_rate=0.03`, `l2_leaf_reg=5.0`, and no automatic class weights. It generated 100 feature-only Stage1_Test probability scores after freeze. There is no test label metric. The independent Stage 1 audit recomputed seven metrics, with maximum absolute difference 5.6e-17 across saved metric rows and zero raw/calibrated top-ten membership disagreements.
 
@@ -86,14 +111,34 @@ The ten highest frozen Stage 1 probabilities were joined to the operational Stag
 
 subject to total contact cost <= 25 and total capacity <= 22. All 210 combinations (10 choose 6) were enumerated. A separately formulated SciPy mixed-integer linear program returned the same optimum with objective difference zero.
 
-| Selected customer | Probability source | Stage 2 role |
-|---|---|---|
-| C0028 | Frozen Stage 1 score keyed by ID | Selected by exact objective |
-| C0031 | Frozen Stage 1 score keyed by ID | Selected by exact objective |
-| C0079 | Frozen Stage 1 score keyed by ID | Selected by exact objective |
-| C0081 | Frozen Stage 1 score keyed by ID | Selected by exact objective |
-| C0327 | Frozen Stage 1 score keyed by ID | Selected by exact objective |
-| C0338 | Frozen Stage 1 score keyed by ID | Selected by exact objective |
+**Frozen top ten: score order and final selection**
+
+| Rank | Customer ID | Frozen Stage 1 probability | Selected in exact-six solution |
+|---:|---|---:|:---:|
+| 1 | C0081 | 0.5079798043273155 | Yes |
+| 2 | C0031 | 0.38629123250240804 | Yes |
+| 3 | C0079 | 0.28324279702612715 | Yes |
+| 4 | C0183 | 0.195225 | No |
+| 5 | C0028 | 0.1840456980818125 | Yes |
+| 6 | C0378 | 0.168357 | No |
+| 7 | C0327 | 0.15780000265136318 | Yes |
+| 8 | C0338 | 0.15564042649226462 | Yes |
+| 9 | C0112 | 0.154011 | No |
+| 10 | C0050 | 0.153937 | No |
+
+The top-ten CSV stores these displayed probabilities to 6 decimals. The six selected customers' longer probability values are also recorded in the Stage 3 result JSON. Use the full inference CSV as the precision authority for all 100 rows.
+
+**Exact selected set and objective contributions**
+
+| Customer ID | Probability | Expected deposit value | Contact cost | Capacity units | Net objective contribution |
+|---|---:|---:|---:|---:|---:|
+| C0028 | 0.184046 | 27 | 4 | 4 | 0.969234 |
+| C0031 | 0.386291 | 13 | 2 | 1 | 3.021786 |
+| C0079 | 0.283243 | 24 | 3 | 3 | 3.797827 |
+| C0081 | 0.507980 | 17 | 4 | 1 | 4.635657 |
+| C0327 | 0.157800 | 25 | 1 | 4 | 2.945000 |
+| C0338 | 0.155640 | 18 | 2 | 2 | 0.801528 |
+| **Total** | — | — | **16 / 25** | **15 / 22** | **16.171031** |
 
 The six full-precision Stage 1 probabilities used in the Stage 3 circuit are, in qubit order: C0028 = 0.1840456980818125; C0031 = 0.38629123250240804; C0079 = 0.28324279702612715; C0081 = 0.5079798043273155; C0327 = 0.15780000265136318; C0338 = 0.15564042649226462. They are available together with customer IDs in `results/stage3_final/actual_stage3_results.json` and the frozen Stage 1 score file. The independent Stage 3 loader maps by customer ID and then restores this order.
 
@@ -106,6 +151,28 @@ The set's expected net objective is 16.1710314161, contact cost 16/25, and capac
 Four one-seed fits compared COBYLA versus SPSA and expectation versus lower-quartile CVaR objectives. Each had a 10-evaluation cap. None certified convergence. Ideal statevector expected rewards were 10.420-11.400, below the exact classical optimum 16.171. Under 2,048-shot illustrative noisy Aer, feasible-shot rates were about 0.11-0.12, conditional feasible rewards about 8.9-9.0, and the exact optimum was not sampled. Readout mitigation changed feasibility only modestly and did not make the short-budget fits competitive with the exact oracle.
 
 Resource cost was large: the transpiled 10-qubit cycle XY circuit had depth 6,010, 7,089 total gates, 3,081 CX gates, and 981 routing SWAPs before basis translation. Since all fixed-six states in the actual pool are feasible, the objective phase can be additive on this sector; this particular run does not validate binding-constraint logic. These observations are a real executable Qiskit/Aer stress test, not a converged quantum optimization result.
+
+**Optimizer endpoints and ideal distributions**
+
+| Optimizer / fit objective | Calls (limit) | Runtime (s) | Statevector expected reward | Statevector exact-optimum probability | Ideal Aer expected reward, 2,048 shots | Ideal Aer exact-optimum probability |
+|---|---:|---:|---:|---:|---:|---:|
+| COBYLA / expectation | 10 / 10 | 9.21 | 10.439871 | 0.001720 | 10.497668 | 0.003418 |
+| SPSA / expectation | 10 / 10 | 18.40 | 11.404554 | 0.038387 | 11.359040 | 0.036133 |
+| COBYLA / CVaR | 10 / 10 | 14.44 | 10.416864 | 0.002415 | 10.494669 | 0.003906 |
+| SPSA / CVaR | 10 / 10 | 13.08 | 11.276575 | 0.035427 | 11.186922 | 0.029297 |
+
+Every optimizer reached its call cap; none certified convergence. The noise-free SPSA endpoints were better in this single seed, but the 10-call comparison is too small to infer a stable optimizer winner.
+
+**Noisy Aer and readout mitigation: 2,048 shots per fit**
+
+| Fit | Noisy feasible-shot rate | Noisy reward conditional on feasibility | Noisy exact-optimum probability | Mitigated feasible-shot rate | Mitigated conditional reward | Mitigated exact-optimum probability |
+|---|---:|---:|---:|---:|---:|---:|
+| COBYLA / expectation | 0.116699 | 8.948555 | 0 | 0.120989 | 8.961728 | 0 |
+| SPSA / expectation | 0.113281 | 8.909788 | 0 | 0.116512 | 8.915779 | 0 |
+| COBYLA / CVaR | 0.117676 | 9.028768 | 0 | 0.122286 | 9.080034 | 0 |
+| SPSA / CVaR | 0.111816 | 8.905011 | 0 | 0.113931 | 8.947442 | 0 |
+
+All raw and mitigated noisy conditions sampled zero exact optima. Mitigation increased feasibility by 0.0021-0.0046 in these one-seed samples, but this alone is not evidence of a reliable gain; the small samples, noisy variance, and short optimization budget remain. Full raw bitstring counts, objective gaps, CVaR endpoints, noise profile, and mitigation uncertainty are retained in the JSON.
 
 ![Actual-pool QAOA comparison](../reports/figures/presentation_stage2_qaoa_comparison.png)
 
@@ -132,7 +199,18 @@ The experiments differ in ansatz, simulator abstraction, objective semantics, an
 
 ### Exact reference and circuit check
 
-The six selected customer probabilities are preserved in the validated Stage 3 artifact and ordered by customer ID mapping. For independent Bernoulli outcomes with those six probabilities, a Poisson-binomial dynamic program and direct enumeration of all 64 bitstrings both return **P(K >= 3) = 0.2078515973394121**. The six-qubit Qiskit circuit prepares qubit i using `RY(2 asin(sqrt(p_i)))`, measures q_i to c_i, and estimates the same threshold. The ideal statevector agrees with the exact result (absolute difference 0); all six marginal probabilities are validated. Qiskit printed count keys use c5...c0, which is explicitly accounted for by the decoder.
+The six selected customer probabilities are preserved in the validated Stage 3 artifact and ordered by qubit mapping:
+
+| Qubit / classical bit | Customer ID | Stage 1 probability | RY angle (radians) | Statevector marginal |
+|---:|---|---:|---:|---:|
+| 0 / 0 | C0028 | 0.1840456980818125 | 0.886783001702541 | 0.18404569808181248 |
+| 1 / 1 | C0031 | 0.38629123250240804 | 1.3413714219956028 | 0.38629123250240800 |
+| 2 / 2 | C0079 | 0.28324279702612715 | 1.1224072647312966 | 0.28324279702612710 |
+| 3 / 3 | C0081 | 0.5079798043273155 | 1.5867566130368103 | 0.5079798043273156 |
+| 4 / 4 | C0327 | 0.15780000265136318 | 0.8170158781722588 | 0.15780000265136312 |
+| 5 / 5 | C0338 | 0.15564042649226462 | 0.8110753847754549 | 0.15564042649226456 |
+
+For independent Bernoulli outcomes with those six probabilities, a Poisson-binomial dynamic program and direct enumeration of all 64 bitstrings both return **P(K >= 3) = 0.2078515973394121**. The six-qubit Qiskit circuit prepares qubit i using `RY(2 asin(sqrt(p_i)))`, measures q_i to c_i, and estimates the same threshold. The ideal statevector agrees with the exact result (absolute difference 0); all six marginal probabilities are validated. Qiskit printed count keys use c5...c0, which is explicitly accounted for by the decoder.
 
 The transpiled circuit used six logical qubits, six physical simulator qubits from the declared seven-qubit line, depth 4, 24 single-qubit gates, zero two-qubit gates, and zero SWAPs. With no entangling gates, the Stage 3 circuit has no two-qubit depolarization exposure or connectivity-induced routing. The local noise profile is illustrative, not backend calibration.
 
@@ -142,11 +220,28 @@ Twelve paired runs cover 512, 2,048, 8,192, and 32,768 shots with three seeds pe
 
 Mean raw noisy estimates at 512/2,048/8,192/32,768 shots were 0.180339 / 0.207520 / 0.213053 / 0.214742. Mean mitigated estimates were 0.163128 / 0.195841 / 0.198778 / 0.200688. Mitigation was worse at the first two shot levels; at 8,192 and 32,768 shots it moved the raw positive bias toward the exact value but slightly increased mean absolute error (raw 0.00520 / 0.00689 versus mitigated 0.00907 / 0.00716). Mean estimated mitigation-to-raw variance ratio was 1.326. The scientific conclusion is **no reliable mitigation gain**: point bias may improve in one condition while variance increases and the paired comparison remains uncertain.
 
+| Shots per circuit | Seeds | Ideal Aer mean | Noisy Aer mean | Mitigated mean | Noisy mean absolute error | Mitigated mean absolute error |
+|---:|---:|---:|---:|---:|---:|---:|
+| 512 | 11, 23, 42 | 0.201823 | 0.180339 | 0.163128 | 0.027513 | 0.044724 |
+| 2,048 | 11, 23, 42 | 0.196126 | 0.207520 | 0.195841 | 0.001738 | 0.012010 |
+| 8,192 | 11, 23, 42 | 0.208293 | 0.213053 | 0.198778 | 0.005202 | 0.009074 |
+| 32,768 | 11, 23, 42 | 0.205455 | 0.214742 | 0.200688 | 0.006890 | 0.007163 |
+
+Exact reference for all four rows: 0.2078515973394121. Each value is a mean of three separately seeded runs; use `actual_stage3_results.json` for individual observations and intervals.
+
 ![Stage 3 probability distribution and threshold](../reports/figures/presentation_stage3_probabilities_distribution.png)
 
 ### Actual IBM Stage 3 hardware result
 
-Job `dbqfi99abdes73fo6vig` ran 8,192 experiment shots on `ibm_marrakesh`, physical qubits `[87, 6, 10, 139, 120, 107]`, plus two 2,048-shot readout calibration circuits. Raw P(K>=3) was 0.201538 (Wilson 95% interval 0.192992-0.210364; absolute error to exact 0.006314). Readout-mitigated was 0.202275 (bootstrap interval 0.192653-0.211392; absolute error 0.005577). Estimated absolute-error reduction was 0.000737 with interval -0.001289 to 0.001840, which contains zero: the mitigation effect is inconclusive. Reconciled QPU time was 5.0 s.
+Job `dbqfi99abdes73fo6vig` ran 8,192 experiment shots on `ibm_marrakesh`, physical qubits `[87, 6, 10, 139, 120, 107]`, plus two 2,048-shot readout calibration circuits:
+
+| Condition | Estimate | 95% interval | Absolute error vs exact |
+|---|---:|---:|---:|
+| Exact Poisson-binomial reference | 0.2078515973394121 | — | 0 |
+| Hardware raw, 8,192 shots | 0.201538 | 0.192992-0.210364 (Wilson) | 0.006314 |
+| Hardware readout-mitigated | 0.202275 | 0.192653-0.211392 (bootstrap) | 0.005577 |
+
+Estimated absolute-error reduction was 0.000737 with interval -0.001289 to 0.001840, which contains zero: the mitigation effect is inconclusive. Reconciled QPU time was 5.0 s.
 
 **Metadata correction:** the immutable Colab ZIP contains a resumed registry record that incorrectly attributes this historical Marrakesh job to Kingston and a current Kingston layout. The original submission record identifies Marrakesh and the qubits above. Raw counts and point estimate were preserved; canonical extracted records use the original submission provenance. Always cite `provenance_correction.json` with source ZIP when auditing this job. Kingston calibration data must not be represented as Marrakesh calibration.
 
@@ -195,7 +290,11 @@ Depth p=2 had the better approximation ratio, but a lower exact-optimum sampling
 5. Read Stage 2 methodology and Qiskit noise reports before discussing advanced algorithms; they state exactly which variants were mathematical simulations, executable Aer circuits, or physical IBM jobs.
 6. Treat any folder named `development`, `interrupted`, `superseded`, or `expanded_tuning` according to its status; do not combine it with the frozen challenge results.
 
-## 11. Repository location map
+## 11. How the comparison tables are designed
+
+The PDF uses dark ink on white or pale table surfaces, with muted teal reserved for section accents. Table headers use a light background and a separate colored rule so the labels remain high-contrast and legible in grayscale or when printed. Wide metric sets are split by purpose (ranking versus probability quality) instead of compressing every measure into one small table. The style follows the [WCAG text contrast guidance](https://www.w3.org/TR/WCAG22/#contrast-minimum) and [government research-report guidance on clear, appropriately sized tables](https://assets.publishing.service.gov.uk/media/6573218e33b7f20012b7213c/Research_reports_guidance_December_2023.pdf).
+
+## 12. Repository location map
 
 The paths below are relative to the repository root. The left column states what a teammate should use the file for; the path is where that evidence is stored.
 
