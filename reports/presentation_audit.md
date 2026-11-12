@@ -2,7 +2,7 @@
 
 ## Why the publication was revised
 
-The first GitHub release had a dense report layout, and the README was text-only. This made the evidence hard to scan. This refresh reorganizes the README around the three challenge stages, embeds five saved result figures directly in the page, and adds short indexes for documentation, reports, and machine-readable results.
+The first GitHub release had a dense report layout, and the README was text-only. This made the evidence hard to scan. This refresh reorganizes the README around the three challenge stages, embeds six saved result figures directly in the page, and adds short indexes for documentation, reports, and machine-readable results.
 
 ## PDF redesign
 
@@ -30,3 +30,4 @@ The README and report distinguish:
 - Raw and readout-mitigated estimates, including inconclusive or negative mitigation findings.
 
 The Stage 3 source export remains immutable, and the canonical backend/layout correction remains documented. No quantum advantage is claimed.
+
