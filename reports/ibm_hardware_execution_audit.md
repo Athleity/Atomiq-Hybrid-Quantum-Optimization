@@ -35,7 +35,7 @@ The QAOA benchmark's state preparation is exact-cardinality, but the displayed f
 
 ## Reproduction and interpretation
 
-Open `notebooks/atomiq_ibm_hardware_experiments_QAOA_HARDWARE_EXPANDED.ipynb` in Colab. Add Colab Secrets named `IBM_QUANTUM_API_KEY`; `IBM_QUANTUM_INSTANCE` is optional if the service can identify the desired instance. The delivered notebook has outputs cleared and includes an explicit resume metadata map, so opening it does not itself claim a fresh run. Hardware execution remains guarded by confirmation and budget gates. The checked-in evidence is the completed historical run, not a rerun.
+Open `notebooks/atomiq_ibm_hardware_experiments_QAOA_HARDWARE_EXPANDED.ipynb` in Colab. Add Colab Secrets named `IBM_QUANTUM_API_KEY`; `IBM_QUANTUM_INSTANCE` is optional if the service can identify the desired instance. The delivered notebook has outputs cleared, includes an explicit resume metadata map, and disarms new submissions by default, so opening it does not claim a fresh run or spend QPU time. Hardware execution remains guarded by confirmation and budget gates. The checked-in evidence is the completed historical run, not a rerun.
 
 For the full classical and simulated pipeline, follow [`docs/reproducibility.md`](../docs/reproducibility.md) and the local locked environment. The original challenge PDF and workbook are deliberately absent from the public package because their redistribution terms are unverified; obtain them through the authorized competition channel and place them in `data/raw/` for reproduction. They are neither changed nor deleted from the local repository.
 
