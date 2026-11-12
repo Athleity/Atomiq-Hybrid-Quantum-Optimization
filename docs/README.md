@@ -8,6 +8,7 @@ Use this page to distinguish operating instructions, methodology, and the chrono
 - [Reproducibility](reproducibility.md) — environment, test commands, experiment runners, and data placement.
 - [Architecture](architecture.md) — source modules and the three-stage flow.
 - [Environment](environment.md) — validated local environment and dependency notes.
+- [Results handoff guide](ATOMIQ_RESULTS_TEAMMATE_GUIDE.md) — detailed interpretation of final, development, synthetic, and IBM hardware results with a file-by-file repository map; a PDF version is in `output/pdf/`.
 
 ## Audits and provenance
 

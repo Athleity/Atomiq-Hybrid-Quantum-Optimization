@@ -5,6 +5,7 @@
 - [Final actual-customer results](final_actual_challenge_results.md) — frozen Stage 1 inference, exact Stage 2 optimum, and exact Stage 3 probability.
 - [IBM hardware execution audit](ibm_hardware_execution_audit.md) — actual IBM execution records, metrics, and the Stage 3 resume-metadata correction.
 - [Typeset research report](../output/pdf/atomiq_final_research_report.pdf) — methods, results, figures, tables, hardware evidence, and limitations.
+- [Detailed teammate results guide](../docs/ATOMIQ_RESULTS_TEAMMATE_GUIDE.md) ([PDF](../output/pdf/atomiq_results_teammate_guide.pdf)) — result interpretation, evidence status, caveats, and repository locations.
 
 ## Methods and independent review
 
