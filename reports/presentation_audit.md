@@ -41,11 +41,13 @@ The report generator requires the passed independent audit and checks the select
 - Stage 3: exact `P(K >= 3)` is 0.2078515973394121; DP and 64-outcome enumeration differ by at most 5.55e-17; statevector probability agrees with the exact value; the independent audit checked 24 raw rates and Wilson intervals.
 - Stage 3 mitigation: the saved three-seed means and absolute errors were carried through as recorded; the report explicitly says mitigation did not consistently improve error and reports the 1.326 variance ratio.
 
-All training validation scores remain validation estimates. Test-label fields were not used. Noise parameters are illustrative, not backend calibration. No QPU execution or quantum advantage is claimed.
+All training validation scores remain validation estimates. Test-label fields were not used. The local Aer noise profiles are illustrative, not backend calibration. The computational audit did not include QPU execution; the later physical runs are documented separately in the hardware audit. No quantum advantage is claimed.
 
-## PDF inspection
+## PDF inspection and hardware-evidence refresh
 
-The final report is `output/pdf/atomiq_final_research_report.pdf`. It is an A4, 14-page ReportLab PDF with title page, abstract, methods/equations, results, figures/captions, tables, limitations, references, and appendices. Rendered pages were reviewed as a contact sheet and at full page size. A clipped QAOA table heading and an orphaned text fragment were corrected; mathematical notation was converted to font-safe text; figures were resized to their native aspect ratios. Page layout, table boundaries, page numbering, and figure captions were checked after the final render. Final file size: 3,282,524 bytes. SHA-256: `776a8d47e8101d80ac8f6a0aa2d0ced2036f80ee1f75e464d38a7f2f2ca0a73a`.
+The report at `output/pdf/atomiq_final_research_report.pdf` was refreshed after the later Colab hardware execution. The earlier 14-page PDF claimed no physical hardware execution, which was accurate at that earlier audit but became outdated. The refreshed A4 report is 15 pages and includes a hardware-results section, Stage 3 and p=1/p=2 synthetic QAOA tables, provenance correction, and an existing hardware QAOA figure. The contents review confirmed the old no-QPU statement is removed. Pages 13–15 were rendered and visually inspected; the hardware results and correction fit without clipping or an orphan page. The refreshed PDF is 3,631,934 bytes; SHA-256: `e883ec37d1ff670919ee867cd5d7862b887a065a91ebda085bf05e98d89a50e`.
+
+The original two Stage 3 figures and computational artifacts are preserved. The report generator uses only saved audited evidence; it did not run models, optimizers, Aer, or QPU jobs. The supplied hardware export's Stage 3 backend/layout attribution is corrected in the canonical results and explicitly flagged in the report; its raw archive remains immutable.
 
 ## Reproduction boundary
 
