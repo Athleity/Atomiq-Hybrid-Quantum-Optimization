@@ -1,0 +1,12 @@
+stage2_xy_binding_development:
+  status: synthetic_binding_constraint_control
+  depth: 1
+  max_objective_evaluations: 100
+  random_seeds: [11, 23, 42]
+  ideal_shots: 4096
+  illustrative_noisy_shots: 1024
+  noise_parameters:
+    depolarizing_1q_per_sx_x: 0.001
+    depolarizing_2q_per_cx: 0.01
+    symmetric_readout_error: 0.02
+    hardware_calibrated: false

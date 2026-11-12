@@ -1,0 +1,15 @@
+# Development-only Stage 2 quantum screening; Stage 1 is not frozen.
+stage2_quantum_development:
+  candidate_source: results/stage2_development/development_candidate_pool.csv
+  method: xy_qaoa_cycle_shared_angle
+  depth: 1
+  optimizer: COBYLA
+  max_evaluations: 100
+  random_seeds: [11, 23, 42]
+  finite_shots: 4096
+  noisy_shots: 1024
+  illustrative_noise:
+    one_qubit_depolarizing_per_sx_or_x: 0.001
+    two_qubit_depolarizing_per_cx: 0.01
+    symmetric_readout_error: 0.02
+    hardware_calibration_source: null

@@ -1,0 +1,28 @@
+{
+  "status": "complete_development_only",
+  "candidate_source": "top ten mean calibrated out-of-fold probabilities from Stage1_Train only",
+  "stage1_frozen": false,
+  "stage1_test_sheet_read": false,
+  "stage1_test_labels_or_predictions_read": false,
+  "selection_exactly_six": true,
+  "selected_customer_ids": [
+    "C0073",
+    "C0094",
+    "C0130",
+    "C0159",
+    "C0217",
+    "C0329"
+  ],
+  "total_contact_cost": 12,
+  "budget_limit": 25,
+  "total_capacity": 17,
+  "capacity_limit": 22,
+  "objective": 9.54561244282308,
+  "feasible_exact_six_subsets": 210,
+  "all_fixed_cardinality_subsets_enumerated": 210,
+  "independent_scipy_milp_objective": 9.54561244282308,
+  "milp_matches_exhaustive_objective": true,
+  "objective_definition": "sum(probability * expected_deposit_value - contact_cost)",
+  "constraint_definition": "exactly six; total contact_cost <= budget; total capacity_units <= capacity limit",
+  "note": "Development fixture only; do not report these candidates or selection as the final challenge result."
+}

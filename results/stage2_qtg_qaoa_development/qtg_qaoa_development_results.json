@@ -1,0 +1,212 @@
+{
+  "status": "completed_synthetic_binding_constraint_methodology_diagnostic",
+  "method": "QTG biased-Hadamard tree state preparation with paper's AAM-QAOA rank-one mixer",
+  "exact_k_two_inequality_adaptation": "suffix feasibility dynamic program checks remaining exact count and both resource limits; reversible implementation would require compiled lookup/arithmetic controls",
+  "high_level_simulation": "complex amplitude propagation over only feasible exact-K assignments; mirrors the QTG paper's high-level statevector simulator",
+  "hardware_gate_decomposition_available": false,
+  "stage1_or_challenge_data_read": false,
+  "instance_is_synthetic": true,
+  "candidate_count": 4,
+  "selected_count": 2,
+  "constraint_limits": {
+    "budget": 3,
+    "capacity": 3
+  },
+  "feasible_states": 3,
+  "exact_optimum": 39.5,
+  "exact_optimum_ids": [
+    "SYN0",
+    "SYN1"
+  ],
+  "qtg_initial_state_checks": [
+    {
+      "bias_b": 0.0,
+      "positive_feasible_states": 3,
+      "state_norm": 1.0000000000000004,
+      "amplitude_min": 0.5000000000000001,
+      "amplitude_max": 0.7071067811865476
+    },
+    {
+      "bias_b": 1.0,
+      "positive_feasible_states": 3,
+      "state_norm": 1.0,
+      "amplitude_min": 0.3333333333333333,
+      "amplitude_max": 0.816496580927726
+    }
+  ],
+  "configuration": {
+    "status": "synthetic_binding_constraint_exact_simulation",
+    "development_instance": "four_item_exact_two_with_both_inequalities",
+    "depth": 1,
+    "max_objective_evaluations": 80,
+    "finite_shots_per_seed": 4096,
+    "bias_values": [
+      0.0,
+      1.0
+    ],
+    "random_seeds": [
+      11,
+      23,
+      42
+    ],
+    "noise_model": null
+  },
+  "runtime_seconds": 2.7827000999823213,
+  "results": [
+    {
+      "seed": 11,
+      "bias_b": 0.0,
+      "depth": 1,
+      "gamma": [
+        2.725875373975791
+      ],
+      "beta": [
+        4.211969543977005
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "objective_evaluations": 80,
+      "expected_objective": 37.82098911615908,
+      "feasible_probability": 0.9999999999999999,
+      "optimal_solution_probability": 0.7680039864361002,
+      "approximation_gap": 0.042506604654200426,
+      "shots": 4096,
+      "sampled_feasible_rate": 1.0,
+      "sampled_optimal_hits": 3184,
+      "best_sampled_objective": 39.5,
+      "feasible_state_count": 3,
+      "positive_amplitude_state_count": 3,
+      "logical_data_qubits_lower_bound": 14
+    },
+    {
+      "seed": 23,
+      "bias_b": 0.0,
+      "depth": 1,
+      "gamma": [
+        4.6623117941910195
+      ],
+      "beta": [
+        4.234108215289391
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "objective_evaluations": 80,
+      "expected_objective": 37.84468685593511,
+      "feasible_probability": 1.0,
+      "optimal_solution_probability": 0.7683827049170028,
+      "approximation_gap": 0.041906661875060536,
+      "shots": 4096,
+      "sampled_feasible_rate": 1.0,
+      "sampled_optimal_hits": 3202,
+      "best_sampled_objective": 39.5,
+      "feasible_state_count": 3,
+      "positive_amplitude_state_count": 3,
+      "logical_data_qubits_lower_bound": 14
+    },
+    {
+      "seed": 42,
+      "bias_b": 0.0,
+      "depth": 1,
+      "gamma": [
+        5.0101658244578235
+      ],
+      "beta": [
+        2.215735188180615
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "objective_evaluations": 80,
+      "expected_objective": 37.642164030246825,
+      "feasible_probability": 0.9999999999999999,
+      "optimal_solution_probability": 0.7644560531799298,
+      "approximation_gap": 0.04703382201906773,
+      "shots": 4096,
+      "sampled_feasible_rate": 1.0,
+      "sampled_optimal_hits": 3132,
+      "best_sampled_objective": 39.5,
+      "feasible_state_count": 3,
+      "positive_amplitude_state_count": 3,
+      "logical_data_qubits_lower_bound": 14
+    },
+    {
+      "seed": 11,
+      "bias_b": 1.0,
+      "depth": 1,
+      "gamma": [
+        1.2150809638129623
+      ],
+      "beta": [
+        2.833537028985447
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "objective_evaluations": 80,
+      "expected_objective": 36.00709067628956,
+      "feasible_probability": 1.0,
+      "optimal_solution_probability": 0.5153649387794097,
+      "approximation_gap": 0.08842808414456817,
+      "shots": 4096,
+      "sampled_feasible_rate": 1.0,
+      "sampled_optimal_hits": 2137,
+      "best_sampled_objective": 39.5,
+      "feasible_state_count": 3,
+      "positive_amplitude_state_count": 3,
+      "logical_data_qubits_lower_bound": 14
+    },
+    {
+      "seed": 23,
+      "bias_b": 1.0,
+      "depth": 1,
+      "gamma": [
+        4.611815158431893
+      ],
+      "beta": [
+        3.9334276538525113
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "objective_evaluations": 80,
+      "expected_objective": 36.23005349788886,
+      "feasible_probability": 1.0,
+      "optimal_solution_probability": 0.518408863219157,
+      "approximation_gap": 0.0827834557496491,
+      "shots": 4096,
+      "sampled_feasible_rate": 1.0,
+      "sampled_optimal_hits": 2138,
+      "best_sampled_objective": 39.5,
+      "feasible_state_count": 3,
+      "positive_amplitude_state_count": 3,
+      "logical_data_qubits_lower_bound": 14
+    },
+    {
+      "seed": 42,
+      "bias_b": 1.0,
+      "depth": 1,
+      "gamma": [
+        5.068709643687002
+      ],
+      "beta": [
+        2.5725492917203394
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "objective_evaluations": 80,
+      "expected_objective": 36.194935669604185,
+      "feasible_probability": 1.0,
+      "optimal_solution_probability": 0.5194828631181723,
+      "approximation_gap": 0.08367251469356494,
+      "shots": 4096,
+      "sampled_feasible_rate": 1.0,
+      "sampled_optimal_hits": 2152,
+      "best_sampled_objective": 39.5,
+      "feasible_state_count": 3,
+      "positive_amplitude_state_count": 3,
+      "logical_data_qubits_lower_bound": 14
+    }
+  ],
+  "limitations": [
+    "The completion predicate is evaluated by memoized classical dynamic programming in this simulator. A quantum implementation needs reversible suffix-feasibility logic, count/cost/capacity registers and compiled arithmetic.",
+    "No gate-level decomposition, finite-shot hardware noise model, or physical quantum processor data is reported.",
+    "This is a two-resource exact-K adaptation of a one-capacity knapsack QTG/AAM-QAOA paper, not a reproduction of its benchmark instances."
+  ]
+}

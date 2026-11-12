@@ -1,0 +1,20 @@
+{
+  "source_path": "/content/atomiq_stage3_results_full.json",
+  "sha256": "84ece3dcad965aae180c33c74863573ecb7fa49fb3358e7fc549c2aad00319af",
+  "size_bytes": 41957,
+  "modified_utc": "2026-11-12T00:00:50+00:00",
+  "location_in_file": "atomiq_stage3_results_full.json, records at /selected_customers_in_qubit_order, columns 'customer_id' and 'stage1_success_probability'",
+  "selection_rule": "mapped by customer ID into validated order",
+  "customer_ids_present_in_file": true,
+  "loaded_utc": "2026-11-12T00:00:50+00:00",
+  "customer_ids": [
+    "C0028",
+    "C0031",
+    "C0079",
+    "C0081",
+    "C0327",
+    "C0338"
+  ],
+  "customer_ids_verified": true,
+  "simulation_only": false
+}

@@ -1,0 +1,8 @@
+{
+  "D_readout_mitigation_A": {
+    "abs_error_reduction": 0.00073676578998913,
+    "ci_low": -0.0012886308962019302,
+    "ci_high": 0.0018401416037782969,
+    "verdict": "inconclusive (CI includes 0)"
+  }
+}

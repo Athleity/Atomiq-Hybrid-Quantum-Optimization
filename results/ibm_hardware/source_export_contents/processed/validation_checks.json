@@ -1,0 +1,137 @@
+[
+  {
+    "check": "A: statevector probabilities sum to 1",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "A: statevector equals the product distribution (qubit i = bit i)",
+    "passed": true,
+    "detail": "max |diff| = 5.6e-17"
+  },
+  {
+    "check": "A: exact P(K>=3) from the circuit statevector matches the reference",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Ordering: X on qubit 0 gives bitstring '000001' (qubit 0 is the rightmost bit)",
+    "passed": true,
+    "detail": "{'000001': 64}"
+  },
+  {
+    "check": "B: Ising form reproduces the cost of all 64 bitstrings",
+    "passed": true,
+    "detail": "max |diff| = 8.9e-16"
+  },
+  {
+    "check": "B: XY-mixer QAOA keeps all probability on weight-3 states",
+    "passed": true,
+    "detail": "feasible mass = 1.000000000000"
+  },
+  {
+    "check": "B: statevector probabilities are normalised",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "A: ideal Aer sampling agrees with exact P(K>=3) within 4 binomial standard errors",
+    "passed": true,
+    "detail": "estimate 0.2156 vs exact 0.2079"
+  },
+  {
+    "check": "B: ideal Aer sampling returns only feasible bitstrings",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "B: ideal Aer sampling agrees with the statevector optimum probability (4 sigma)",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "B p=1: ideal high-shot sampler preserves exact cardinality",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "B p=2: ideal high-shot sampler preserves exact cardinality",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "B: pair gate exp(-i beta (XX+YY)) equals the matrix exponential (native_xy=True, exact incl. phase)",
+    "passed": true,
+    "detail": "max |diff| = 1.1e-16"
+  },
+  {
+    "check": "B: pair gate exp(-i beta (XX+YY)) equals the matrix exponential (native_xy=False, exact incl. phase)",
+    "passed": true,
+    "detail": "max |diff| = 1.1e-16"
+  },
+  {
+    "check": "B: initial state is a single basis state of Hamming weight k",
+    "passed": true,
+    "detail": "state = 010101"
+  },
+  {
+    "check": "B: cost layer is diagonal",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "B: cost-layer phases equal exp(-i gamma (C(x) - C(0))) for all 64 states (sign and angle convention)",
+    "passed": true,
+    "detail": "max |diff| = 5.0e-16"
+  },
+  {
+    "check": "B: mixer layer has no matrix element between different Hamming weights (native_xy=True)",
+    "passed": true,
+    "detail": "max leakage amplitude = 0.0e+00"
+  },
+  {
+    "check": "B: mixer layer has no matrix element between different Hamming weights (native_xy=False)",
+    "passed": true,
+    "detail": "max leakage amplitude = 5.6e-17"
+  },
+  {
+    "check": "B: the XXPlusYY and RXX/RYY circuit variants are the same unitary",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "B: sequential mixer differs from the exact global evolution and the gap shrinks about 4x per halving of beta (first-order product formula)",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Transpiled circuits are native on the backend and use only the chosen physical qubits",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Experiment A uses no two-qubit gates after transpilation",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "B: no routing SWAPs were inserted for either construction",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "B: p=1 and p=2 high-shot circuits and matched calibrations are native on the same best chain",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Readout mitigation exactly inverts a known confusion (qubit ordering verified)",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Calibration estimator gives zero error for perfect all-0 / all-1 data",
+    "passed": true,
+    "detail": ""
+  }
+]

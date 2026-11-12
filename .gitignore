@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.log
+!results/**/experiment.log
+.pytest_cache/
+work/*
+!work/.gitkeep
+catboost_info/

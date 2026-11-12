@@ -1,0 +1,514 @@
+{
+  "A_best": {
+    "physical_qubits": [
+      56,
+      149,
+      64,
+      118,
+      68,
+      17
+    ],
+    "native_checked": true,
+    "depth": 5,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 24,
+    "gate_counts": {
+      "sx": 12,
+      "rz": 12,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 2,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.244e-06,
+    "estimated_success_probability": 0.977808793169818
+  },
+  "cal0_A_best": {
+    "physical_qubits": [
+      56,
+      149,
+      64,
+      118,
+      68,
+      17
+    ],
+    "native_checked": true,
+    "depth": 1,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 0,
+    "gate_counts": {
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 1,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.18e-06,
+    "estimated_success_probability": 0.9806266152576408
+  },
+  "cal1_A_best": {
+    "physical_qubits": [
+      56,
+      149,
+      64,
+      118,
+      68,
+      17
+    ],
+    "native_checked": true,
+    "depth": 2,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 6,
+    "gate_counts": {
+      "x": 6,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 2,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.2119999999999997e-06,
+    "estimated_success_probability": 0.9792166906335271
+  },
+  "A_middle": {
+    "physical_qubits": [
+      129,
+      50,
+      27,
+      114,
+      2,
+      123
+    ],
+    "native_checked": true,
+    "depth": 5,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 24,
+    "gate_counts": {
+      "sx": 12,
+      "rz": 12,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 2,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.244e-06,
+    "estimated_success_probability": 0.9262636255808403
+  },
+  "cal0_A_middle": {
+    "physical_qubits": [
+      129,
+      50,
+      27,
+      114,
+      2,
+      123
+    ],
+    "native_checked": true,
+    "depth": 1,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 0,
+    "gate_counts": {
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 1,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.18e-06,
+    "estimated_success_probability": 0.9294152278525347
+  },
+  "cal1_A_middle": {
+    "physical_qubits": [
+      129,
+      50,
+      27,
+      114,
+      2,
+      123
+    ],
+    "native_checked": true,
+    "depth": 2,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 6,
+    "gate_counts": {
+      "x": 6,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 2,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.2119999999999997e-06,
+    "estimated_success_probability": 0.9278380885805085
+  },
+  "A_poor": {
+    "physical_qubits": [
+      102,
+      90,
+      98,
+      138,
+      125,
+      153
+    ],
+    "native_checked": true,
+    "depth": 5,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 24,
+    "gate_counts": {
+      "sx": 12,
+      "rz": 12,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 2,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.244e-06,
+    "estimated_success_probability": 0.7490654297716074
+  },
+  "cal0_A_poor": {
+    "physical_qubits": [
+      102,
+      90,
+      98,
+      138,
+      125,
+      153
+    ],
+    "native_checked": true,
+    "depth": 1,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 0,
+    "gate_counts": {
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 1,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.18e-06,
+    "estimated_success_probability": 0.7511964627217194
+  },
+  "cal1_A_poor": {
+    "physical_qubits": [
+      102,
+      90,
+      98,
+      138,
+      125,
+      153
+    ],
+    "native_checked": true,
+    "depth": 2,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 6,
+    "gate_counts": {
+      "x": 6,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 2,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.2119999999999997e-06,
+    "estimated_success_probability": 0.7501301894948343
+  },
+  "B_best": {
+    "physical_qubits": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "native_checked": true,
+    "depth": 54,
+    "two_qubit_depth": 14,
+    "two_qubit_gates": 19,
+    "total_gates": 136,
+    "gate_counts": {
+      "sx": 57,
+      "rz": 56,
+      "cz": 19,
+      "measure": 6,
+      "x": 4,
+      "barrier": 1
+    },
+    "logical_depth": 12,
+    "logical_two_qubit_gates": 15,
+    "estimated_duration_s": 3.800000000000001e-06,
+    "estimated_success_probability": 0.9049299498762688
+  },
+  "cal0_B_best": {
+    "physical_qubits": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "native_checked": true,
+    "depth": 1,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 0,
+    "gate_counts": {
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 1,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.18e-06,
+    "estimated_success_probability": 0.9624915003831888
+  },
+  "cal1_B_best": {
+    "physical_qubits": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "native_checked": true,
+    "depth": 2,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 6,
+    "gate_counts": {
+      "x": 6,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 2,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.2119999999999997e-06,
+    "estimated_success_probability": 0.9597761173529676
+  },
+  "B_typical": {
+    "physical_qubits": [
+      69,
+      78,
+      89,
+      90,
+      91,
+      92
+    ],
+    "native_checked": true,
+    "depth": 54,
+    "two_qubit_depth": 14,
+    "two_qubit_gates": 19,
+    "total_gates": 136,
+    "gate_counts": {
+      "sx": 57,
+      "rz": 56,
+      "cz": 19,
+      "measure": 6,
+      "x": 4,
+      "barrier": 1
+    },
+    "logical_depth": 12,
+    "logical_two_qubit_gates": 15,
+    "estimated_duration_s": 3.800000000000001e-06,
+    "estimated_success_probability": 0.8497379433449476
+  },
+  "cal0_B_typical": {
+    "physical_qubits": [
+      69,
+      78,
+      89,
+      90,
+      91,
+      92
+    ],
+    "native_checked": true,
+    "depth": 1,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 0,
+    "gate_counts": {
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 1,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.18e-06,
+    "estimated_success_probability": 0.8989994661206849
+  },
+  "cal1_B_typical": {
+    "physical_qubits": [
+      69,
+      78,
+      89,
+      90,
+      91,
+      92
+    ],
+    "native_checked": true,
+    "depth": 2,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 6,
+    "gate_counts": {
+      "x": 6,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 2,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.2119999999999997e-06,
+    "estimated_success_probability": 0.8971482071095744
+  },
+  "B_p1_best": {
+    "physical_qubits": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "native_checked": true,
+    "depth": 54,
+    "two_qubit_depth": 14,
+    "two_qubit_gates": 19,
+    "total_gates": 136,
+    "gate_counts": {
+      "sx": 57,
+      "rz": 56,
+      "cz": 19,
+      "measure": 6,
+      "x": 4,
+      "barrier": 1
+    },
+    "logical_depth": 12,
+    "logical_two_qubit_gates": 15,
+    "estimated_duration_s": 3.800000000000001e-06,
+    "estimated_success_probability": 0.9049299498762688
+  },
+  "cal0_B_p1_best": {
+    "physical_qubits": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "native_checked": true,
+    "depth": 1,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 0,
+    "gate_counts": {
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 1,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.18e-06,
+    "estimated_success_probability": 0.9624915003831888
+  },
+  "cal1_B_p1_best": {
+    "physical_qubits": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "native_checked": true,
+    "depth": 2,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 6,
+    "gate_counts": {
+      "x": 6,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 2,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.2119999999999997e-06,
+    "estimated_success_probability": 0.9597761173529676
+  },
+  "B_p2_best": {
+    "physical_qubits": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "native_checked": true,
+    "depth": 89,
+    "two_qubit_depth": 22,
+    "two_qubit_gates": 35,
+    "total_gates": 246,
+    "gate_counts": {
+      "sx": 104,
+      "rz": 101,
+      "cz": 35,
+      "x": 6,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 21,
+    "logical_two_qubit_gates": 30,
+    "estimated_duration_s": 4.76e-06,
+    "estimated_success_probability": 0.8625957040528203
+  },
+  "cal0_B_p2_best": {
+    "physical_qubits": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "native_checked": true,
+    "depth": 1,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 0,
+    "gate_counts": {
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 1,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.18e-06,
+    "estimated_success_probability": 0.9624915003831888
+  },
+  "cal1_B_p2_best": {
+    "physical_qubits": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "native_checked": true,
+    "depth": 2,
+    "two_qubit_depth": 1,
+    "two_qubit_gates": 0,
+    "total_gates": 6,
+    "gate_counts": {
+      "x": 6,
+      "measure": 6,
+      "barrier": 1
+    },
+    "logical_depth": 2,
+    "logical_two_qubit_gates": 0,
+    "estimated_duration_s": 2.2119999999999997e-06,
+    "estimated_success_probability": 0.9597761173529676
+  }
+}

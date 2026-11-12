@@ -1,0 +1,20 @@
+# Locked evaluation choices for the classical Stage 1 baseline.
+phase1_classical:
+  seed: 42
+  outer_splits: 3
+  outer_repeats: 3
+  inner_splits: 2
+  search_iterations: 2
+  calibration_method: positive_slope_sigmoid
+  top_k: 10
+  n_jobs: 1
+
+# Each tuned weighted model evaluates one sampled unweighted and one sampled
+# balanced candidate inside the same inner folds.
+# No oversampling is used: with only 35 positives, class weighting keeps every
+# fold's observed class counts intact and avoids synthetic validation examples.
+imbalance:
+  strategy: search_class_weight_none_vs_balanced
+  metrics_emphasized: [pr_auc, precision_at_10, recall_at_10, brier_score, log_loss]
+# Calibration method: fold-local sigmoid recalibration with a strictly positive slope.
+# This preserves each fitted estimator's within-fold probability ranking.

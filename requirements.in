@@ -1,0 +1,16 @@
+# Direct runtime dependencies verified on CPython 3.12.14, Windows x86-64.
+# requirements-lock.txt pins the complete resolved environment.
+numpy==2.5.4
+pandas==3.1.1
+scipy==1.18.1
+scikit-learn==1.9.1
+openpyxl==3.1.5
+matplotlib==3.11.2
+pytest==9.2.0
+PyYAML==6.0.3
+catboost==1.2.10
+lightgbm==4.7.0
+qiskit==2.6.2
+qiskit-aer==0.18.2
+qiskit-machine-learning==0.9.1
+qiskit-optimization==0.7.0

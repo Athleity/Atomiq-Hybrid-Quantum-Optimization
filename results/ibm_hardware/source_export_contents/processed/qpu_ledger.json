@@ -1,0 +1,24 @@
+[
+  {
+    "job_label": "job1_stage3_best_layout",
+    "job_id": "dbqfi99abdes73fo6vig",
+    "status": "DONE",
+    "estimated_seconds": 7.599377664,
+    "planned_cost_seconds": 15.198755328,
+    "actual_seconds": 5.0,
+    "usage_reconciled": true,
+    "counted_seconds": 5.0,
+    "cumulative_seconds": 5.0
+  },
+  {
+    "job_label": "job2_stage2_synthetic_best_chain",
+    "job_id": "dbqg5d1abdes73fo7o10",
+    "status": "DONE",
+    "estimated_seconds": 29.327072,
+    "planned_cost_seconds": 58.654144,
+    "actual_seconds": 26.0,
+    "usage_reconciled": true,
+    "counted_seconds": 26.0,
+    "cumulative_seconds": 31.0
+  }
+]

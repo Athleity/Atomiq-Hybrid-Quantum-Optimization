@@ -1,0 +1,22 @@
+qiskit_circuit_noise:
+  status: illustrative_backend_simulation_not_calibration
+  depth: 1
+  seed: 11
+  evaluation_seed: 2026
+  calibration_seed: 731
+  noise_optimizer_seed: 991
+  noise_optimizer_iterations: 8
+  noise_optimizer_shots: 128
+  optimizer_evaluations: 12
+  cvar_alpha: 0.25
+  evaluation_shots: 2048
+  stage3_shot_sweep: [512, 8192]
+  readout_calibration_shots: 4096
+  stage3_seeds: [11, 23, 42]
+  gate_noise_scales: [0.5, 1.0, 1.5]
+  optimization_variants:
+    - [xy, COBYLA, expectation]
+    - [xy, COBYLA, cvar]
+    - [xy, SPSA, expectation]
+    - [xy, SPSA, cvar]
+    - [standard, COBYLA, expectation]

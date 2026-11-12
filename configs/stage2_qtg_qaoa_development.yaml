@@ -1,0 +1,9 @@
+stage2_qtg_qaoa_development:
+  status: synthetic_binding_constraint_exact_simulation
+  development_instance: four_item_exact_two_with_both_inequalities
+  depth: 1
+  max_objective_evaluations: 80
+  finite_shots_per_seed: 4096
+  bias_values: [0.0, 1.0]
+  random_seeds: [11, 23, 42]
+  noise_model: null

@@ -1,0 +1,33 @@
+{
+  "label": "cal1_B_p2_best",
+  "source": "noisy_sim",
+  "experiment": "calibration",
+  "layout_name": "best",
+  "shots": 8000,
+  "counts": {
+    "010111": 1,
+    "110101": 2,
+    "101110": 1,
+    "101111": 55,
+    "111101": 43,
+    "110111": 85,
+    "101011": 1,
+    "111011": 19,
+    "011111": 38,
+    "111110": 90,
+    "111111": 7665
+  },
+  "backend": "AerSimulator.from_backend(ibm_kingston)",
+  "job_id": "",
+  "job_label": "",
+  "physical_qubits": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152
+  ],
+  "suppression": "none",
+  "notes": ""
+}

@@ -1,0 +1,67 @@
+{
+  "name": "ibm_kingston",
+  "num_qubits": 156,
+  "is_fake_local_snapshot": false,
+  "two_qubit_gate": "cz",
+  "basis_gates": [
+    "cz",
+    "delay",
+    "id",
+    "if_else",
+    "measure",
+    "measure_2",
+    "measure_reset",
+    "measure_reset_2",
+    "reset",
+    "reset_2",
+    "rz",
+    "sx",
+    "x",
+    "xslow"
+  ],
+  "layouts_experiment_a": {
+    "best": [
+      56,
+      149,
+      64,
+      118,
+      68,
+      17
+    ],
+    "middle": [
+      129,
+      50,
+      27,
+      114,
+      2,
+      123
+    ],
+    "poor": [
+      102,
+      90,
+      98,
+      138,
+      125,
+      153
+    ]
+  },
+  "layouts_experiment_b": {
+    "best": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "typical": [
+      69,
+      78,
+      89,
+      90,
+      91,
+      92
+    ]
+  },
+  "queue_pending_jobs_at_selection": 1
+}

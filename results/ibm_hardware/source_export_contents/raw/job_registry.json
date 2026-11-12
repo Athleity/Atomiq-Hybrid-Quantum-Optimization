@@ -1,0 +1,100 @@
+{
+  "job1_stage3_best_layout": {
+    "job_label": "job1_stage3_best_layout",
+    "job_id": "dbqfi99abdes73fo6vig",
+    "backend": "ibm_marrakesh",
+    "experiment": "A (real Stage 3 data)",
+    "entries": [
+      [
+        "A_best",
+        8192
+      ],
+      [
+        "cal0_A_best",
+        2048
+      ],
+      [
+        "cal1_A_best",
+        2048
+      ]
+    ],
+    "suppression": "none",
+    "submitted_utc": "2026-11-12T00:02:31+00:00",
+    "session": "2026-11-12T00:00:13+00:00",
+    "estimated_seconds": 7.599377664,
+    "planned_cost_seconds": 15.198755328,
+    "status": "DONE",
+    "usage_reconciled": true,
+    "actual_seconds": 5.0,
+    "results_saved": true,
+    "note": "resumed from RESUME_JOB_IDS; counted against the budget like any other job",
+    "physical_qubits_by_label": {
+      "A_best": [
+        87,
+        6,
+        10,
+        139,
+        120,
+        107
+      ],
+      "cal0_A_best": [
+        87,
+        6,
+        10,
+        139,
+        120,
+        107
+      ],
+      "cal1_A_best": [
+        87,
+        6,
+        10,
+        139,
+        120,
+        107
+      ]
+    },
+    "provenance_correction": "Corrected from contemporaneous original submission evidence; source export incorrectly inherited current Kingston backend/layout while resuming the prior Marrakesh job."
+  },
+  "job2_stage2_synthetic_best_chain": {
+    "job_label": "job2_stage2_synthetic_best_chain",
+    "job_id": "dbqg5d1abdes73fo7o10",
+    "backend": "ibm_kingston",
+    "experiment": "B (SYNTHETIC instance)",
+    "entries": [
+      [
+        "B_p1_best",
+        30000
+      ],
+      [
+        "cal0_B_p1_best",
+        8000
+      ],
+      [
+        "cal1_B_p1_best",
+        8000
+      ],
+      [
+        "B_p2_best",
+        30000
+      ],
+      [
+        "cal0_B_p2_best",
+        8000
+      ],
+      [
+        "cal1_B_p2_best",
+        8000
+      ]
+    ],
+    "suppression": "none",
+    "submitted_utc": "2026-11-12T00:05:08+00:00",
+    "session": "2026-11-12T00:00:13+00:00",
+    "estimated_seconds": 29.327072,
+    "planned_cost_seconds": 58.654144,
+    "status": "DONE",
+    "usage_reconciled": true,
+    "actual_seconds": 26.0,
+    "results_saved": true
+  }
+}

@@ -1,0 +1,55 @@
+project:
+  name: atomiq-hackathon-2026
+  phase: 1
+  phase_status: classical_stage1_baseline_complete
+  timezone: Asia/Calcutta
+  random_seed: 42
+
+sources:
+  challenge_pdf: data/raw/PROBLEM_STATEMENT_THE_ATOMIQ_HACKTHON.pdf
+  workbook: data/raw/bank_campaign_participant_release.xlsx
+
+environment:
+  python: "3.12.14"
+  platform: windows-amd64
+  virtual_environment: .venv
+  direct_dependencies: requirements.in
+  resolved_lock: requirements-lock.txt
+
+stage1:
+  train_sheet: Stage1_Train
+  test_sheet: Stage1_Test
+  id_column: customer_id
+  target_column: y
+  positive_label: yes
+  ranking:
+    candidate_count: 10
+    probability_order: descending
+    tie_break: customer_id_ascending_alphanumeric
+  prohibitions:
+    - Do not use held-out test labels or aggregate statistics that reveal them.
+    - Fit preprocessing and probability calibration on training data only.
+    - Exclude customer_id from predictors.
+    - Do not use duration.
+
+stage2:
+  operational_sheet: Stage2_Data
+  constraints_sheet: Stage2_Constraints
+  selected_count: 6
+  budget_limit: 25
+  capacity_limit: 22
+  objective: sum(predicted_probability * expected_deposit_value - contact_cost)
+  oracle: exhaustive_enumeration
+
+stage3:
+  selected_count: 6
+  success_threshold: 3
+  independent_customer_responses: true
+  exact_reference: poisson_binomial
+
+execution:
+  prediction_generated_once_after_model_selection: true
+  quantum_backend: local_aer_simulator
+  hardware_backend_configured: false
+  phase0_experiments_run: false
+  stage1_test_predictions_generated: false

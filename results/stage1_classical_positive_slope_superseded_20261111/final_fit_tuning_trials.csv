@@ -1,0 +1,3 @@
+model,repeat,fold,search_seed,candidate_index,parameters_json,inner_pr_auc_mean,inner_pr_auc_std,rank,selected
+catboost_native,0,0,900043,0,"{""auto_class_weights"": null, ""depth"": 5, ""iterations"": 140, ""l2_leaf_reg"": 5.0, ""learning_rate"": 0.03}",0.20633711846408187,0.014629931620720224,1,True
+catboost_native,0,0,900043,1,"{""auto_class_weights"": ""Balanced"", ""depth"": 5, ""iterations"": 140, ""l2_leaf_reg"": 2.0, ""learning_rate"": 0.03}",0.18216185234321458,0.011387094085969177,2,False

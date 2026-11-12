@@ -1,0 +1,19 @@
+2026-11-11 18:50:41,347 INFO fit model=catboost_native repeat=1 fold=1 train=200 validation=100 seed=10143
+2026-11-11 18:51:16,046 INFO fit model=lightgbm repeat=1 fold=1 train=200 validation=100 seed=10144
+2026-11-11 18:51:17,236 INFO fit model=catboost_native repeat=1 fold=2 train=200 validation=100 seed=10244
+2026-11-11 18:52:17,121 INFO fit model=lightgbm repeat=1 fold=2 train=200 validation=100 seed=10245
+2026-11-11 18:52:18,001 INFO fit model=catboost_native repeat=1 fold=3 train=200 validation=100 seed=10345
+2026-11-11 18:52:57,559 INFO fit model=lightgbm repeat=1 fold=3 train=200 validation=100 seed=10346
+2026-11-11 18:52:58,649 INFO fit model=catboost_native repeat=2 fold=1 train=200 validation=100 seed=20143
+2026-11-11 18:53:31,400 INFO fit model=lightgbm repeat=2 fold=1 train=200 validation=100 seed=20144
+2026-11-11 18:53:32,591 INFO fit model=catboost_native repeat=2 fold=2 train=200 validation=100 seed=20244
+2026-11-11 18:54:09,312 INFO fit model=lightgbm repeat=2 fold=2 train=200 validation=100 seed=20245
+2026-11-11 18:54:10,481 INFO fit model=catboost_native repeat=2 fold=3 train=200 validation=100 seed=20345
+2026-11-11 18:54:36,980 INFO fit model=lightgbm repeat=2 fold=3 train=200 validation=100 seed=20346
+2026-11-11 18:54:38,068 INFO fit model=catboost_native repeat=3 fold=1 train=200 validation=100 seed=30143
+2026-11-11 18:55:23,835 INFO fit model=lightgbm repeat=3 fold=1 train=200 validation=100 seed=30144
+2026-11-11 18:55:25,602 INFO fit model=catboost_native repeat=3 fold=2 train=200 validation=100 seed=30244
+2026-11-11 18:56:00,201 INFO fit model=lightgbm repeat=3 fold=2 train=200 validation=100 seed=30245
+2026-11-11 18:56:01,026 INFO fit model=catboost_native repeat=3 fold=3 train=200 validation=100 seed=30345
+2026-11-11 18:56:27,759 INFO fit model=lightgbm repeat=3 fold=3 train=200 validation=100 seed=30346
+2026-11-11 18:57:14,132 INFO completed run_id=phase1-20261111T132041Z champion=catboost_native

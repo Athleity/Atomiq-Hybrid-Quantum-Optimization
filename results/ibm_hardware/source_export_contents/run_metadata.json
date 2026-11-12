@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-11-12T00:00:13+00:00",
+  "finished_utc": "2026-11-12T00:06:07+00:00",
+  "python": "3.13.18",
+  "qiskit": "2.2.3",
+  "qiskit_aer": "0.17.2",
+  "qiskit_ibm_runtime": "0.43.1",
+  "random_seed": 2026,
+  "shots": {
+    "stage3": 8192,
+    "calibration": 2048,
+    "qaoa_simulation": 4096,
+    "qaoa_hardware_per_depth": 30000,
+    "qaoa_hardware_calibration": 8000
+  },
+  "hardware_armed": true,
+  "new_jobs_submitted_this_run": 1,
+  "qpu_seconds_counted": 31.0,
+  "probability_source": "/content/atomiq_stage3_results_full.json"
+}

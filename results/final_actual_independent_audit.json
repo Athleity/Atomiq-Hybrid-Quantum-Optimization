@@ -1,0 +1,29 @@
+{
+  "status": "passed_independent_actual_result_audit",
+  "stage1_prediction_rows": 100,
+  "stage1_predictions_sha256": "7633df6aae6eb8fada7e0fe28623112f9ca20a9669ff9c1a6fadad91f6c5a5e1",
+  "stage1_test_labels_requested_or_used": false,
+  "stage2_subsets_exhaustively_checked": 210,
+  "stage2_feasible_exact_six_count": 210,
+  "stage2_milp_objective_difference": 0.0,
+  "stage2_selected_customer_ids": [
+    "C0028",
+    "C0031",
+    "C0079",
+    "C0081",
+    "C0327",
+    "C0338"
+  ],
+  "stage2_objective": 16.1710314160765,
+  "stage2_qaoa_variants_independently_recomputed": 4,
+  "stage2_qaoa_distribution_metric_max_abs_error": 0.0,
+  "stage3_exact_probability_at_least_three": 0.2078515973394121,
+  "stage3_finite_shot_rate_and_wilson_checks": 24,
+  "checks": {
+    "dp_vs_64_outcome_enumeration_max_abs_error": 5.551115123125783e-17,
+    "dp_vs_persisted_stage3_histogram_max_abs_error": 0.0,
+    "statevector_vs_exact_weight_histogram_max_abs_error": 5.551115123125783e-17,
+    "stage3_p_ge_3_vs_exact_abs_error": 0.0,
+    "selected_six_match_stage2_optimum": true
+  }
+}

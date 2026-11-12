@@ -1,0 +1,99 @@
+{
+  "status": "passed_independent_saved_count_audit",
+  "stage1_test_data_read": false,
+  "stage2_four_item": {
+    "path": "results\\stage2_qiskit_noise\\qiskit_stage2_noise_results.json",
+    "run_checks": [
+      {
+        "ansatz": "xy",
+        "optimizer": "COBYLA",
+        "objective": "expectation",
+        "raw_metrics_match_saved": true,
+        "mitigated_metrics_match_saved": true,
+        "shots": 2048
+      },
+      {
+        "ansatz": "xy",
+        "optimizer": "COBYLA",
+        "objective": "cvar",
+        "raw_metrics_match_saved": true,
+        "mitigated_metrics_match_saved": true,
+        "shots": 2048
+      },
+      {
+        "ansatz": "xy",
+        "optimizer": "SPSA",
+        "objective": "expectation",
+        "raw_metrics_match_saved": true,
+        "mitigated_metrics_match_saved": true,
+        "shots": 2048
+      },
+      {
+        "ansatz": "xy",
+        "optimizer": "SPSA",
+        "objective": "cvar",
+        "raw_metrics_match_saved": true,
+        "mitigated_metrics_match_saved": true,
+        "shots": 2048
+      },
+      {
+        "ansatz": "standard",
+        "optimizer": "COBYLA",
+        "objective": "expectation",
+        "raw_metrics_match_saved": true,
+        "mitigated_metrics_match_saved": true,
+        "shots": 2048
+      }
+    ]
+  },
+  "stage2_ten_item": {
+    "path": "results\\stage2_qiskit_ten_candidate\\ten_candidate_exact_six_qiskit_results.json",
+    "raw_metrics_match_saved": true,
+    "shots": 512,
+    "independently_recomputed_raw_metrics": {
+      "shots": 512,
+      "feasible_probability": 0.123046875,
+      "expected_feasible_objective": 0.608161973382946,
+      "conditional_feasible_objective": 4.942522704318545,
+      "optimal_probability": 0.0,
+      "best_feasible_measured_objective": 9.082644705997499
+    }
+  },
+  "stage3": {
+    "path": "results\\stage3_qiskit_noise\\qiskit_stage3_noise_results.json",
+    "exact_probability": 0.05426956001511194,
+    "statevector_matches_exact": true,
+    "seed_checks": [
+      {
+        "seed": 11,
+        "shots": 2048,
+        "raw_probability": 0.0703125,
+        "mitigated_probability": 0.05974267294645851
+      },
+      {
+        "seed": 23,
+        "shots": 2048,
+        "raw_probability": 0.07080078125,
+        "mitigated_probability": 0.059943383958928606
+      },
+      {
+        "seed": 42,
+        "shots": 2048,
+        "raw_probability": 0.0712890625,
+        "mitigated_probability": 0.06032611710763165
+      },
+      {
+        "seed": 11,
+        "shots": 512,
+        "raw_probability": 0.0625,
+        "mitigated_probability": 0.054109746469010074
+      },
+      {
+        "seed": 11,
+        "shots": 8192,
+        "raw_probability": 0.0699462890625,
+        "mitigated_probability": 0.05792457807708299
+      }
+    ]
+  }
+}

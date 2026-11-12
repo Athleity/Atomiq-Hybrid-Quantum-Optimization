@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "training_rows": 300,
+  "training_positive_count": 35,
+  "test_sheet_read_by_audit": false,
+  "checked_model_fold_predictions": 90,
+  "checked_metric_rows": 180,
+  "independently_checked_metric_names": [
+    "roc_auc",
+    "pr_auc",
+    "precision_at_10",
+    "recall_at_10",
+    "brier_score",
+    "log_loss",
+    "ece_10_bins"
+  ],
+  "maximum_absolute_metric_recomputation_error": 5.551115123125783e-17,
+  "maximum_top10_membership_disagreements": 0
+}

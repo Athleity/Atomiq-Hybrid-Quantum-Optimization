@@ -1,0 +1,2257 @@
+{
+  "status": "completed_qiskit_parameterized_stage2_noise_diagnostic",
+  "qiskit_version": "2.6.2",
+  "qiskit_aer_version": "0.18.2",
+  "execution_classification": [
+    "actual Qiskit QuantumCircuit",
+    "ideal Statevector simulation",
+    "ideal finite-shot Aer",
+    "noisy finite-shot Aer",
+    "readout assignment calibration Aer"
+  ],
+  "problem": {
+    "synthetic_fixture": true,
+    "stage1_or_challenge_data_read": false,
+    "candidates": 4,
+    "selected_count": 2,
+    "feasible_exact_cardinality_states": 3,
+    "exact_optimum": 39.5,
+    "exact_optimum_ids": [
+      "SYN0",
+      "SYN1"
+    ]
+  },
+  "profile": {
+    "name": "illustrative_7q_line_v1",
+    "physical_qubits": 7,
+    "t1_seconds": [
+      7.2e-05,
+      6.1e-05,
+      8.3e-05,
+      6.8e-05,
+      7.6e-05,
+      5.7e-05,
+      8.9e-05
+    ],
+    "t2_seconds": [
+      5.4e-05,
+      4.7e-05,
+      6.3e-05,
+      5.1e-05,
+      5.8e-05,
+      4.3e-05,
+      6.6e-05
+    ],
+    "readout_0_to_1": [
+      0.018,
+      0.026,
+      0.021,
+      0.031,
+      0.017,
+      0.029,
+      0.022
+    ],
+    "readout_1_to_0": [
+      0.034,
+      0.028,
+      0.041,
+      0.036,
+      0.025,
+      0.044,
+      0.032
+    ],
+    "one_qubit_depolarizing": 0.0004,
+    "two_qubit_depolarizing": 0.008,
+    "sx_duration_seconds": 3.5e-08,
+    "x_duration_seconds": 7e-08,
+    "cx_duration_seconds": 3e-07,
+    "measurement_duration_seconds": 8e-07,
+    "calibration_source": null,
+    "calibration_timestamp": null,
+    "is_hardware_calibrated": false,
+    "topology": "bidirectional linear chain",
+    "time_unit": "seconds",
+    "readout_convention": "P(observed | true), asymmetric 0->1 and 1->0",
+    "measurement_relaxation_model": "thermal relaxation on an id gate lasting measurement_duration_seconds, followed by classical assignment error"
+  },
+  "configuration": {
+    "status": "illustrative_backend_simulation_not_calibration",
+    "depth": 1,
+    "seed": 11,
+    "evaluation_seed": 2026,
+    "calibration_seed": 731,
+    "noise_optimizer_seed": 991,
+    "noise_optimizer_iterations": 8,
+    "noise_optimizer_shots": 128,
+    "optimizer_evaluations": 12,
+    "cvar_alpha": 0.25,
+    "evaluation_shots": 2048,
+    "readout_calibration_shots": 4096,
+    "stage3_seeds": [
+      11,
+      23,
+      42
+    ],
+    "gate_noise_scales": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "optimization_variants": [
+      [
+        "xy",
+        "COBYLA",
+        "expectation"
+      ],
+      [
+        "xy",
+        "COBYLA",
+        "cvar"
+      ],
+      [
+        "xy",
+        "SPSA",
+        "expectation"
+      ],
+      [
+        "xy",
+        "SPSA",
+        "cvar"
+      ],
+      [
+        "standard",
+        "COBYLA",
+        "expectation"
+      ]
+    ]
+  },
+  "readout_calibration": {
+    "method": "Aer readout-only calibration circuits for prepared 0 and 1 on each physical qubit; gate errors disabled to isolate assignment channel",
+    "calibration_runtime_seconds": 0.38911889999872074,
+    "shots_per_prepared_state_per_qubit": 4096,
+    "estimated_matrices_observed_given_true": [
+      [
+        [
+          0.98193359375,
+          0.03466796875
+        ],
+        [
+          0.01806640625,
+          0.96533203125
+        ]
+      ],
+      [
+        [
+          0.974365234375,
+          0.029052734375
+        ],
+        [
+          0.025634765625,
+          0.970947265625
+        ]
+      ],
+      [
+        [
+          0.977294921875,
+          0.047119140625
+        ],
+        [
+          0.022705078125,
+          0.952880859375
+        ]
+      ],
+      [
+        [
+          0.9658203125,
+          0.03125
+        ],
+        [
+          0.0341796875,
+          0.96875
+        ]
+      ]
+    ]
+  },
+  "optimizer_comparison": [
+    {
+      "ansatz": "xy",
+      "optimizer": "COBYLA",
+      "objective": "expectation",
+      "parameters": [
+        1.2305559327258158,
+        2.7327912063282307
+      ],
+      "training_score": 885.4518533862044,
+      "evaluations": 12,
+      "success": false,
+      "termination": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "runtime_seconds": 1.3367570000118576
+    },
+    {
+      "ansatz": "xy",
+      "optimizer": "COBYLA",
+      "objective": "cvar",
+      "parameters": [
+        0.7484814718255458,
+        2.1389457034101875
+      ],
+      "training_score": -39.5,
+      "evaluations": 12,
+      "success": false,
+      "termination": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "runtime_seconds": 1.0860886999871582
+    },
+    {
+      "ansatz": "xy",
+      "optimizer": "SPSA",
+      "objective": "expectation",
+      "parameters": [
+        4.5730518513674,
+        1.6580561573246593
+      ],
+      "training_score": 856.2799900101021,
+      "evaluations": 10,
+      "success": false,
+      "termination": "SPSA fixed iteration budget completed; convergence was not certified.",
+      "runtime_seconds": 1.606873299984727
+    },
+    {
+      "ansatz": "xy",
+      "optimizer": "SPSA",
+      "objective": "cvar",
+      "parameters": [
+        0.6217293897377091,
+        2.9509543102409346
+      ],
+      "training_score": -38.01902626844799,
+      "evaluations": 10,
+      "success": false,
+      "termination": "SPSA fixed iteration budget completed; convergence was not certified.",
+      "runtime_seconds": 1.7122737999889068
+    },
+    {
+      "ansatz": "standard",
+      "optimizer": "COBYLA",
+      "objective": "expectation",
+      "parameters": [
+        1.3737976244674566,
+        2.605906836544915
+      ],
+      "training_score": 1347.5705251816626,
+      "evaluations": 12,
+      "success": false,
+      "termination": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "runtime_seconds": 1.1540850999881513
+    }
+  ],
+  "runs": [
+    {
+      "ansatz": "xy",
+      "optimizer": "COBYLA",
+      "objective": "expectation",
+      "fit": {
+        "ansatz": "xy",
+        "optimizer": "COBYLA",
+        "objective": "expectation",
+        "parameters": [
+          1.2305559327258158,
+          2.7327912063282307
+        ],
+        "training_score": 885.4518533862044,
+        "evaluations": 12,
+        "success": false,
+        "termination": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+        "runtime_seconds": 1.3367570000118576
+      },
+      "evaluation": {
+        "classification": {
+          "ideal_statevector": true,
+          "ideal_finite_shot_aer": true,
+          "noisy_finite_shot_aer": true,
+          "readout_mitigated_noisy_aer": true
+        },
+        "shots": 2048,
+        "seed": 2026,
+        "gate_noise_scale": 1.0,
+        "ideal_statevector_metrics": {
+          "feasible_probability_estimate": 0.7073795332467939,
+          "expected_objective_over_all_shots_feasible_only": 23.144458497983443,
+          "expected_objective_conditional_on_feasible": 32.718586572264726,
+          "cvar_25_percent_feasible_objective": 34.16582504191446,
+          "exact_optimum_sampling_probability": 0.03171849130757211,
+          "objective_gap_conditional_on_feasible": 6.781413427735274,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 0.9999999999999999
+        },
+        "ideal_finite_shot_metrics": {
+          "feasible_probability_estimate": 0.69921875,
+          "expected_objective_over_all_shots_feasible_only": 22.89013671875,
+          "expected_objective_conditional_on_feasible": 32.73673184357542,
+          "cvar_25_percent_feasible_objective": 34.05307262569833,
+          "exact_optimum_sampling_probability": 0.0283203125,
+          "objective_gap_conditional_on_feasible": 6.76326815642458,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": 39.5
+        },
+        "noisy_finite_shot_metrics": {
+          "feasible_probability_estimate": 0.181640625,
+          "expected_objective_over_all_shots_feasible_only": 6.05126953125,
+          "expected_objective_conditional_on_feasible": 33.314516129032256,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.06396484375,
+          "objective_gap_conditional_on_feasible": 6.185483870967744,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": 39.5
+        },
+        "noisy_readout_mitigated_quasi_metrics": {
+          "feasible_probability_estimate": 0.18629961043024829,
+          "expected_objective_over_all_shots_feasible_only": 6.203537861094506,
+          "expected_objective_conditional_on_feasible": 33.29871622795018,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.06470478154022652,
+          "objective_gap_conditional_on_feasible": 6.20128377204982,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0000000000000016
+        },
+        "noisy_readout_mitigated_projected_metrics": {
+          "feasible_probability_estimate": 0.186299610430248,
+          "expected_objective_over_all_shots_feasible_only": 6.203537861094496,
+          "expected_objective_conditional_on_feasible": 33.29871622795018,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.06470478154022642,
+          "objective_gap_conditional_on_feasible": 6.20128377204982,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": null
+        },
+        "readout_mitigation": {
+          "condition_number": 1.2937675132078057,
+          "negative_quasi_mass": -0.0,
+          "calibration_shots_per_prepared_state_per_qubit": 4096,
+          "calibration_runtime_seconds": 0.38911889999872074,
+          "mitigation_runtime_seconds": 0.0009410000056959689,
+          "bootstrap_feasibility_variance": {
+            "bootstrap_replicates": 100,
+            "raw_metric_variance": 6.686015562577681e-05,
+            "mitigated_metric_variance": 9.046516129515559e-05,
+            "mitigation_variance_ratio": 1.3530504146819284,
+            "bootstrap_runtime_seconds": 0.02273679996142164
+          }
+        },
+        "runtime_seconds": {
+          "ideal_finite_shot_simulation": 0.06457469996530563,
+          "noisy_finite_shot_simulation": 18.029151500028092
+        },
+        "transpilation": {
+          "ideal_depth": 1326,
+          "noisy_depth": 1326,
+          "noisy_gate_counts": {
+            "cx": 851,
+            "rz": 637,
+            "sx": 120,
+            "x": 64,
+            "id": 4,
+            "measure": 4,
+            "barrier": 2
+          }
+        },
+        "raw_noisy_counts": {
+          "1000": 170,
+          "0000": 192,
+          "0001": 139,
+          "1001": 145,
+          "0101": 128,
+          "1011": 113,
+          "0010": 133,
+          "0110": 113,
+          "1010": 110,
+          "1110": 86,
+          "1100": 127,
+          "0100": 134,
+          "1111": 96,
+          "1101": 127,
+          "0011": 131,
+          "0111": 104
+        },
+        "resource_report": {
+          "logical_qubits": 4,
+          "physical_qubits_available": 7,
+          "physical_qubits_used": 4,
+          "initial_layout_logical_to_physical": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "coupling_map": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "basis_gates": [
+            "id",
+            "rz",
+            "sx",
+            "x",
+            "cx"
+          ],
+          "transpiled_depth": 1106,
+          "transpiled_total_gates": 1332,
+          "transpiled_one_qubit_gates": 631,
+          "transpiled_two_qubit_gates": 701,
+          "transpiled_gate_counts": {
+            "cx": 701,
+            "rz": 497,
+            "sx": 107,
+            "x": 27
+          },
+          "routing_swap_count_before_basis_translation": 168,
+          "routing_transpiled_depth_before_basis_translation": 1029,
+          "compile_runtime_seconds": 0.16068410000298172,
+          "optimization_level": 1,
+          "seed_transpiler": 2026
+        },
+        "noisy_readout_mitigated_quasi_distribution": [
+          0.09329730055769529,
+          0.06695692016518406,
+          0.062625778479427,
+          0.06470478154022652,
+          0.065752680978826,
+          0.06545169610307401,
+          0.056143132786947755,
+          0.05275840949311324,
+          0.08085136453712027,
+          0.07049374284568177,
+          0.05076945879878598,
+          0.05439514126485624,
+          0.06209740786688882,
+          0.06457202744139831,
+          0.04083401001492833,
+          0.04829614712584794
+        ],
+        "noisy_readout_mitigated_projected_distribution": [
+          0.0932973005576952,
+          0.06695692016518397,
+          0.06262577847942691,
+          0.06470478154022642,
+          0.0657526809788259,
+          0.06545169610307391,
+          0.05614313278694766,
+          0.05275840949311314,
+          0.08085136453712018,
+          0.07049374284568168,
+          0.05076945879878588,
+          0.054395141264856145,
+          0.06209740786688872,
+          0.06457202744139821,
+          0.040834010014928236,
+          0.048296147125847844
+        ]
+      }
+    },
+    {
+      "ansatz": "xy",
+      "optimizer": "COBYLA",
+      "objective": "cvar",
+      "fit": {
+        "ansatz": "xy",
+        "optimizer": "COBYLA",
+        "objective": "cvar",
+        "parameters": [
+          0.7484814718255458,
+          2.1389457034101875
+        ],
+        "training_score": -39.5,
+        "evaluations": 12,
+        "success": false,
+        "termination": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+        "runtime_seconds": 1.0860886999871582
+      },
+      "evaluation": {
+        "classification": {
+          "ideal_statevector": true,
+          "ideal_finite_shot_aer": true,
+          "noisy_finite_shot_aer": true,
+          "readout_mitigated_noisy_aer": true
+        },
+        "shots": 2048,
+        "seed": 2026,
+        "gate_noise_scale": 1.0,
+        "ideal_statevector_metrics": {
+          "feasible_probability_estimate": 0.7010658460767958,
+          "expected_objective_over_all_shots_feasible_only": 22.72614919049345,
+          "expected_objective_conditional_on_feasible": 32.416568739827035,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.2638595673342494,
+          "objective_gap_conditional_on_feasible": 7.083431260172965,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0
+        },
+        "ideal_finite_shot_metrics": {
+          "feasible_probability_estimate": 0.701171875,
+          "expected_objective_over_all_shots_feasible_only": 22.59912109375,
+          "expected_objective_conditional_on_feasible": 32.23050139275766,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.2529296875,
+          "objective_gap_conditional_on_feasible": 7.26949860724234,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": 39.5
+        },
+        "noisy_finite_shot_metrics": {
+          "feasible_probability_estimate": 0.1845703125,
+          "expected_objective_over_all_shots_feasible_only": 6.093994140625,
+          "expected_objective_conditional_on_feasible": 33.017195767195766,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.060546875,
+          "objective_gap_conditional_on_feasible": 6.482804232804234,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": 39.5
+        },
+        "noisy_readout_mitigated_quasi_metrics": {
+          "feasible_probability_estimate": 0.18821440324748667,
+          "expected_objective_over_all_shots_feasible_only": 6.208617262002765,
+          "expected_objective_conditional_on_feasible": 32.986940185650596,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.06041590649045722,
+          "objective_gap_conditional_on_feasible": 6.513059814349404,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0000000000000022
+        },
+        "noisy_readout_mitigated_projected_metrics": {
+          "feasible_probability_estimate": 0.18821440324748623,
+          "expected_objective_over_all_shots_feasible_only": 6.20861726200275,
+          "expected_objective_conditional_on_feasible": 32.9869401856506,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.06041590649045708,
+          "objective_gap_conditional_on_feasible": 6.513059814349397,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": null
+        },
+        "readout_mitigation": {
+          "condition_number": 1.2937675132078057,
+          "negative_quasi_mass": -0.0,
+          "calibration_shots_per_prepared_state_per_qubit": 4096,
+          "calibration_runtime_seconds": 0.38911889999872074,
+          "mitigation_runtime_seconds": 0.002112099959049374,
+          "bootstrap_feasibility_variance": {
+            "bootstrap_replicates": 100,
+            "raw_metric_variance": 7.007278577245847e-05,
+            "mitigated_metric_variance": 9.753825230657174e-05,
+            "mitigation_variance_ratio": 1.3919562527926261,
+            "bootstrap_runtime_seconds": 0.054730999981984496
+          }
+        },
+        "runtime_seconds": {
+          "ideal_finite_shot_simulation": 0.052496800024528056,
+          "noisy_finite_shot_simulation": 18.753181400010362
+        },
+        "transpilation": {
+          "ideal_depth": 1326,
+          "noisy_depth": 1326,
+          "noisy_gate_counts": {
+            "cx": 851,
+            "rz": 637,
+            "sx": 120,
+            "x": 64,
+            "id": 4,
+            "measure": 4,
+            "barrier": 2
+          }
+        },
+        "raw_noisy_counts": {
+          "0000": 220,
+          "0011": 124,
+          "1101": 108,
+          "0100": 143,
+          "1011": 85,
+          "0010": 159,
+          "0101": 131,
+          "0001": 139,
+          "1100": 138,
+          "0111": 128,
+          "1000": 130,
+          "1010": 104,
+          "1110": 86,
+          "1001": 127,
+          "0110": 123,
+          "1111": 103
+        },
+        "resource_report": {
+          "logical_qubits": 4,
+          "physical_qubits_available": 7,
+          "physical_qubits_used": 4,
+          "initial_layout_logical_to_physical": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "coupling_map": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "basis_gates": [
+            "id",
+            "rz",
+            "sx",
+            "x",
+            "cx"
+          ],
+          "transpiled_depth": 1106,
+          "transpiled_total_gates": 1332,
+          "transpiled_one_qubit_gates": 631,
+          "transpiled_two_qubit_gates": 701,
+          "transpiled_gate_counts": {
+            "cx": 701,
+            "rz": 497,
+            "sx": 107,
+            "x": 27
+          },
+          "routing_swap_count_before_basis_translation": 168,
+          "routing_transpiled_depth_before_basis_translation": 1029,
+          "compile_runtime_seconds": 0.10089060000609607,
+          "optimization_level": 1,
+          "seed_transpiler": 2026
+        },
+        "noisy_readout_mitigated_quasi_distribution": [
+          0.10853206735257513,
+          0.06701361594105981,
+          0.0763509189579583,
+          0.06041590649045722,
+          0.06997188154330664,
+          0.0670044294720652,
+          0.06079406728496424,
+          0.06619715475489775,
+          0.05881349277683174,
+          0.061987364677023093,
+          0.0481529675668553,
+          0.03920610718212247,
+          0.06893309083133413,
+          0.0537874458355574,
+          0.04041027657277379,
+          0.052429212760219945
+        ],
+        "noisy_readout_mitigated_projected_distribution": [
+          0.10853206735257499,
+          0.06701361594105967,
+          0.07635091895795816,
+          0.06041590649045708,
+          0.0699718815433065,
+          0.06700442947206506,
+          0.0607940672849641,
+          0.06619715475489761,
+          0.0588134927768316,
+          0.061987364677022955,
+          0.04815296756685516,
+          0.03920610718212233,
+          0.06893309083133399,
+          0.05378744583555726,
+          0.04041027657277365,
+          0.05242921276021981
+        ]
+      }
+    },
+    {
+      "ansatz": "xy",
+      "optimizer": "SPSA",
+      "objective": "expectation",
+      "fit": {
+        "ansatz": "xy",
+        "optimizer": "SPSA",
+        "objective": "expectation",
+        "parameters": [
+          4.5730518513674,
+          1.6580561573246593
+        ],
+        "training_score": 856.2799900101021,
+        "evaluations": 10,
+        "success": false,
+        "termination": "SPSA fixed iteration budget completed; convergence was not certified.",
+        "runtime_seconds": 1.606873299984727
+      },
+      "evaluation": {
+        "classification": {
+          "ideal_statevector": true,
+          "ideal_finite_shot_aer": true,
+          "noisy_finite_shot_aer": true,
+          "readout_mitigated_noisy_aer": true
+        },
+        "shots": 2048,
+        "seed": 2026,
+        "gate_noise_scale": 1.0,
+        "ideal_statevector_metrics": {
+          "feasible_probability_estimate": 0.6117143322739924,
+          "expected_objective_over_all_shots_feasible_only": 20.73913780128546,
+          "expected_objective_conditional_on_feasible": 33.9033053618175,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.22052200708620576,
+          "objective_gap_conditional_on_feasible": 5.596694638182498,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0
+        },
+        "ideal_finite_shot_metrics": {
+          "feasible_probability_estimate": 0.60888671875,
+          "expected_objective_over_all_shots_feasible_only": 20.591552734375,
+          "expected_objective_conditional_on_feasible": 33.81836407377706,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.2099609375,
+          "objective_gap_conditional_on_feasible": 5.681635926222938,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": 39.5
+        },
+        "noisy_finite_shot_metrics": {
+          "feasible_probability_estimate": 0.19287109375,
+          "expected_objective_over_all_shots_feasible_only": 6.294921875,
+          "expected_objective_conditional_on_feasible": 32.63797468354431,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.05517578125,
+          "objective_gap_conditional_on_feasible": 6.862025316455693,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": 39.5
+        },
+        "noisy_readout_mitigated_quasi_metrics": {
+          "feasible_probability_estimate": 0.19881383677806885,
+          "expected_objective_over_all_shots_feasible_only": 6.473120204942416,
+          "expected_objective_conditional_on_feasible": 32.55870069128139,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.054499349792736,
+          "objective_gap_conditional_on_feasible": 6.941299308718612,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0000000000000016
+        },
+        "noisy_readout_mitigated_projected_metrics": {
+          "feasible_probability_estimate": 0.19881383677806858,
+          "expected_objective_over_all_shots_feasible_only": 6.473120204942406,
+          "expected_objective_conditional_on_feasible": 32.55870069128139,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.0544993497927359,
+          "objective_gap_conditional_on_feasible": 6.941299308718612,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": null
+        },
+        "readout_mitigation": {
+          "condition_number": 1.2937675132078057,
+          "negative_quasi_mass": -0.0,
+          "calibration_shots_per_prepared_state_per_qubit": 4096,
+          "calibration_runtime_seconds": 0.38911889999872074,
+          "mitigation_runtime_seconds": 0.002080800011754036,
+          "bootstrap_feasibility_variance": {
+            "bootstrap_replicates": 100,
+            "raw_metric_variance": 6.731553511186079e-05,
+            "mitigated_metric_variance": 9.373812154956836e-05,
+            "mitigation_variance_ratio": 1.3925184044633998,
+            "bootstrap_runtime_seconds": 0.05195489997277036
+          }
+        },
+        "runtime_seconds": {
+          "ideal_finite_shot_simulation": 0.06690209999214858,
+          "noisy_finite_shot_simulation": 18.879654099990148
+        },
+        "transpilation": {
+          "ideal_depth": 1326,
+          "noisy_depth": 1326,
+          "noisy_gate_counts": {
+            "cx": 851,
+            "rz": 637,
+            "sx": 120,
+            "x": 64,
+            "id": 4,
+            "measure": 4,
+            "barrier": 2
+          }
+        },
+        "raw_noisy_counts": {
+          "0001": 143,
+          "1001": 145,
+          "0100": 141,
+          "0011": 113,
+          "1011": 107,
+          "0010": 138,
+          "1000": 136,
+          "0101": 147,
+          "0000": 209,
+          "1110": 90,
+          "1101": 105,
+          "0111": 114,
+          "1100": 100,
+          "1010": 118,
+          "1111": 107,
+          "0110": 135
+        },
+        "resource_report": {
+          "logical_qubits": 4,
+          "physical_qubits_available": 7,
+          "physical_qubits_used": 4,
+          "initial_layout_logical_to_physical": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "coupling_map": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "basis_gates": [
+            "id",
+            "rz",
+            "sx",
+            "x",
+            "cx"
+          ],
+          "transpiled_depth": 1106,
+          "transpiled_total_gates": 1332,
+          "transpiled_one_qubit_gates": 631,
+          "transpiled_two_qubit_gates": 701,
+          "transpiled_gate_counts": {
+            "cx": 701,
+            "rz": 497,
+            "sx": 107,
+            "x": 27
+          },
+          "routing_swap_count_before_basis_translation": 168,
+          "routing_transpiled_depth_before_basis_translation": 1029,
+          "compile_runtime_seconds": 0.10154230002081022,
+          "optimization_level": 1,
+          "seed_transpiler": 2026
+        },
+        "noisy_readout_mitigated_quasi_distribution": [
+          0.1027783168572715,
+          0.06875032846731327,
+          0.06472476737044082,
+          0.054499349792736,
+          0.06915122057131978,
+          0.07631722815661879,
+          0.06799725882871407,
+          0.05795498868076945,
+          0.06271197017107552,
+          0.07146892713899015,
+          0.05552107136899686,
+          0.05104133182530273,
+          0.04783058918826924,
+          0.05186951862269624,
+          0.04268686749958324,
+          0.054696265459903894
+        ],
+        "noisy_readout_mitigated_projected_distribution": [
+          0.1027783168572714,
+          0.06875032846731317,
+          0.06472476737044072,
+          0.0544993497927359,
+          0.06915122057131969,
+          0.07631722815661869,
+          0.06799725882871398,
+          0.05795498868076935,
+          0.06271197017107542,
+          0.07146892713899006,
+          0.05552107136899676,
+          0.051041331825302634,
+          0.04783058918826914,
+          0.05186951862269614,
+          0.04268686749958314,
+          0.054696265459903796
+        ]
+      }
+    },
+    {
+      "ansatz": "xy",
+      "optimizer": "SPSA",
+      "objective": "cvar",
+      "fit": {
+        "ansatz": "xy",
+        "optimizer": "SPSA",
+        "objective": "cvar",
+        "parameters": [
+          0.6217293897377091,
+          2.9509543102409346
+        ],
+        "training_score": -38.01902626844799,
+        "evaluations": 10,
+        "success": false,
+        "termination": "SPSA fixed iteration budget completed; convergence was not certified.",
+        "runtime_seconds": 1.7122737999889068
+      },
+      "evaluation": {
+        "classification": {
+          "ideal_statevector": true,
+          "ideal_finite_shot_aer": true,
+          "noisy_finite_shot_aer": true,
+          "readout_mitigated_noisy_aer": true
+        },
+        "shots": 2048,
+        "seed": 2026,
+        "gate_noise_scale": 1.0,
+        "ideal_statevector_metrics": {
+          "feasible_probability_estimate": 0.5257594705271408,
+          "expected_objective_over_all_shots_feasible_only": 16.818575953713694,
+          "expected_objective_conditional_on_feasible": 31.98910699002898,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.1930394718633842,
+          "objective_gap_conditional_on_feasible": 7.510893009971021,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0
+        },
+        "ideal_finite_shot_metrics": {
+          "feasible_probability_estimate": 0.51513671875,
+          "expected_objective_over_all_shots_feasible_only": 16.41552734375,
+          "expected_objective_conditional_on_feasible": 31.866350710900473,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.18408203125,
+          "objective_gap_conditional_on_feasible": 7.633649289099527,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": 39.5
+        },
+        "noisy_finite_shot_metrics": {
+          "feasible_probability_estimate": 0.185546875,
+          "expected_objective_over_all_shots_feasible_only": 6.15478515625,
+          "expected_objective_conditional_on_feasible": 33.171052631578945,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.064453125,
+          "objective_gap_conditional_on_feasible": 6.328947368421055,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": 39.5
+        },
+        "noisy_readout_mitigated_quasi_metrics": {
+          "feasible_probability_estimate": 0.1910329451569641,
+          "expected_objective_over_all_shots_feasible_only": 6.332674923676997,
+          "expected_objective_conditional_on_feasible": 33.14964818489132,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.06555747626534962,
+          "objective_gap_conditional_on_feasible": 6.350351815108681,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0000000000000013
+        },
+        "noisy_readout_mitigated_projected_metrics": {
+          "feasible_probability_estimate": 0.1910329451569638,
+          "expected_objective_over_all_shots_feasible_only": 6.332674923676987,
+          "expected_objective_conditional_on_feasible": 33.14964818489131,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.06555747626534952,
+          "objective_gap_conditional_on_feasible": 6.350351815108688,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 0.9999999999999999,
+          "best_feasible_measured_objective": null
+        },
+        "readout_mitigation": {
+          "condition_number": 1.2937675132078057,
+          "negative_quasi_mass": -0.0,
+          "calibration_shots_per_prepared_state_per_qubit": 4096,
+          "calibration_runtime_seconds": 0.38911889999872074,
+          "mitigation_runtime_seconds": 0.0017169999773614109,
+          "bootstrap_feasibility_variance": {
+            "bootstrap_replicates": 100,
+            "raw_metric_variance": 6.915533181392784e-05,
+            "mitigated_metric_variance": 9.387956340673248e-05,
+            "mitigation_variance_ratio": 1.3575173590277705,
+            "bootstrap_runtime_seconds": 0.040798000001814216
+          }
+        },
+        "runtime_seconds": {
+          "ideal_finite_shot_simulation": 0.08189879998099059,
+          "noisy_finite_shot_simulation": 19.247828699997626
+        },
+        "transpilation": {
+          "ideal_depth": 1326,
+          "noisy_depth": 1326,
+          "noisy_gate_counts": {
+            "cx": 851,
+            "rz": 637,
+            "sx": 120,
+            "x": 64,
+            "id": 4,
+            "measure": 4,
+            "barrier": 2
+          }
+        },
+        "raw_noisy_counts": {
+          "0101": 126,
+          "1000": 160,
+          "0000": 199,
+          "1010": 110,
+          "1001": 148,
+          "0011": 132,
+          "0010": 126,
+          "0110": 122,
+          "0001": 132,
+          "1011": 105,
+          "1111": 100,
+          "1101": 134,
+          "1100": 125,
+          "1110": 94,
+          "0100": 130,
+          "0111": 105
+        },
+        "resource_report": {
+          "logical_qubits": 4,
+          "physical_qubits_available": 7,
+          "physical_qubits_used": 4,
+          "initial_layout_logical_to_physical": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "coupling_map": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "basis_gates": [
+            "id",
+            "rz",
+            "sx",
+            "x",
+            "cx"
+          ],
+          "transpiled_depth": 1106,
+          "transpiled_total_gates": 1332,
+          "transpiled_one_qubit_gates": 631,
+          "transpiled_two_qubit_gates": 701,
+          "transpiled_gate_counts": {
+            "cx": 701,
+            "rz": 497,
+            "sx": 107,
+            "x": 27
+          },
+          "routing_swap_count_before_basis_translation": 168,
+          "routing_transpiled_depth_before_basis_translation": 1029,
+          "compile_runtime_seconds": 0.09874889999628067,
+          "optimization_level": 1,
+          "seed_transpiler": 2026
+        },
+        "noisy_readout_mitigated_quasi_distribution": [
+          0.09763453497484745,
+          0.06300126645038648,
+          0.058442929617359154,
+          0.06555747626534962,
+          0.06336083004760713,
+          0.0643161054719851,
+          0.061159363419629374,
+          0.05317326177791479,
+          0.07529739432700835,
+          0.07232713211483255,
+          0.05100479852051279,
+          0.049805333871436694,
+          0.060933826447589504,
+          0.06846981925665321,
+          0.04505292058359146,
+          0.05046300685329778
+        ],
+        "noisy_readout_mitigated_projected_distribution": [
+          0.09763453497484735,
+          0.06300126645038638,
+          0.05844292961735906,
+          0.06555747626534952,
+          0.06336083004760704,
+          0.064316105471985,
+          0.06115936341962928,
+          0.05317326177791469,
+          0.07529739432700826,
+          0.07232713211483245,
+          0.05100479852051269,
+          0.0498053338714366,
+          0.060933826447589406,
+          0.06846981925665312,
+          0.045052920583591366,
+          0.05046300685329768
+        ]
+      }
+    },
+    {
+      "ansatz": "standard",
+      "optimizer": "COBYLA",
+      "objective": "expectation",
+      "fit": {
+        "ansatz": "standard",
+        "optimizer": "COBYLA",
+        "objective": "expectation",
+        "parameters": [
+          1.3737976244674566,
+          2.605906836544915
+        ],
+        "training_score": 1347.5705251816626,
+        "evaluations": 12,
+        "success": false,
+        "termination": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+        "runtime_seconds": 1.1540850999881513
+      },
+      "evaluation": {
+        "classification": {
+          "ideal_statevector": true,
+          "ideal_finite_shot_aer": true,
+          "noisy_finite_shot_aer": true,
+          "readout_mitigated_noisy_aer": true
+        },
+        "shots": 2048,
+        "seed": 2026,
+        "gate_noise_scale": 1.0,
+        "ideal_statevector_metrics": {
+          "feasible_probability_estimate": 0.26612120247973914,
+          "expected_objective_over_all_shots_feasible_only": 8.762101174091622,
+          "expected_objective_conditional_on_feasible": 32.9252276498289,
+          "cvar_25_percent_feasible_objective": 37.398569092628875,
+          "exact_optimum_sampling_probability": 0.04502124985079277,
+          "objective_gap_conditional_on_feasible": 6.574772350171102,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 0.9999999999999999
+        },
+        "ideal_finite_shot_metrics": {
+          "feasible_probability_estimate": 0.267578125,
+          "expected_objective_over_all_shots_feasible_only": 8.82373046875,
+          "expected_objective_conditional_on_feasible": 32.97627737226277,
+          "cvar_25_percent_feasible_objective": 37.36496350364963,
+          "exact_optimum_sampling_probability": 0.044921875,
+          "objective_gap_conditional_on_feasible": 6.523722627737229,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": 39.5
+        },
+        "noisy_finite_shot_metrics": {
+          "feasible_probability_estimate": 0.1875,
+          "expected_objective_over_all_shots_feasible_only": 6.16845703125,
+          "expected_objective_conditional_on_feasible": 32.8984375,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.06298828125,
+          "objective_gap_conditional_on_feasible": 6.6015625,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": 39.5
+        },
+        "noisy_readout_mitigated_quasi_metrics": {
+          "feasible_probability_estimate": 0.19071051959096713,
+          "expected_objective_over_all_shots_feasible_only": 6.26678726687679,
+          "expected_objective_conditional_on_feasible": 32.86020760846174,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.06289428219665648,
+          "objective_gap_conditional_on_feasible": 6.639792391538258,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0000000000000018
+        },
+        "noisy_readout_mitigated_projected_metrics": {
+          "feasible_probability_estimate": 0.1907105195909668,
+          "expected_objective_over_all_shots_feasible_only": 6.26678726687678,
+          "expected_objective_conditional_on_feasible": 32.86020760846175,
+          "cvar_25_percent_feasible_objective": 39.5,
+          "exact_optimum_sampling_probability": 0.06289428219665637,
+          "objective_gap_conditional_on_feasible": 6.639792391538251,
+          "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+          "distribution_sum": 1.0,
+          "best_feasible_measured_objective": null
+        },
+        "readout_mitigation": {
+          "condition_number": 1.2937675132078057,
+          "negative_quasi_mass": -0.0,
+          "calibration_shots_per_prepared_state_per_qubit": 4096,
+          "calibration_runtime_seconds": 0.38911889999872074,
+          "mitigation_runtime_seconds": 0.0015089000225998461,
+          "bootstrap_feasibility_variance": {
+            "bootstrap_replicates": 100,
+            "raw_metric_variance": 8.388988899462151e-05,
+            "mitigated_metric_variance": 0.00011640825041572451,
+            "mitigation_variance_ratio": 1.3876314751493815,
+            "bootstrap_runtime_seconds": 0.05567849997896701
+          }
+        },
+        "runtime_seconds": {
+          "ideal_finite_shot_simulation": 0.05507460003718734,
+          "noisy_finite_shot_simulation": 18.163584300025832
+        },
+        "transpilation": {
+          "ideal_depth": 1210,
+          "noisy_depth": 1210,
+          "noisy_gate_counts": {
+            "cx": 815,
+            "rz": 548,
+            "sx": 76,
+            "x": 64,
+            "id": 4,
+            "measure": 4,
+            "barrier": 2
+          }
+        },
+        "raw_noisy_counts": {
+          "0001": 135,
+          "1001": 117,
+          "0000": 151,
+          "1000": 132,
+          "0010": 145,
+          "0110": 135,
+          "1111": 120,
+          "0011": 129,
+          "0111": 139,
+          "1010": 152,
+          "1110": 122,
+          "0100": 130,
+          "1101": 105,
+          "1011": 96,
+          "1100": 120,
+          "0101": 120
+        },
+        "resource_report": {
+          "logical_qubits": 4,
+          "physical_qubits_available": 7,
+          "physical_qubits_used": 4,
+          "initial_layout_logical_to_physical": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "coupling_map": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "basis_gates": [
+            "id",
+            "rz",
+            "sx",
+            "x",
+            "cx"
+          ],
+          "transpiled_depth": 1001,
+          "transpiled_total_gates": 1205,
+          "transpiled_one_qubit_gates": 546,
+          "transpiled_two_qubit_gates": 659,
+          "transpiled_gate_counts": {
+            "cx": 659,
+            "rz": 447,
+            "sx": 74,
+            "x": 25
+          },
+          "routing_swap_count_before_basis_translation": 165,
+          "routing_transpiled_depth_before_basis_translation": 916,
+          "compile_runtime_seconds": 0.0714542000205256,
+          "optimization_level": 1,
+          "seed_transpiler": 2026
+        },
+        "noisy_readout_mitigated_quasi_distribution": [
+          0.07170806289930344,
+          0.06590332124255771,
+          0.06848947102479838,
+          0.06289428219665648,
+          0.06398808353639406,
+          0.06082043525532734,
+          0.0669958021389833,
+          0.07211590220754768,
+          0.06112435121464251,
+          0.05642826596667858,
+          0.07325370270659,
+          0.04439801781439072,
+          0.058627551254832204,
+          0.052360672431918026,
+          0.05952431543064271,
+          0.061367762678738697
+        ],
+        "noisy_readout_mitigated_projected_distribution": [
+          0.07170806289930333,
+          0.0659033212425576,
+          0.06848947102479827,
+          0.06289428219665637,
+          0.06398808353639394,
+          0.06082043525532723,
+          0.0669958021389832,
+          0.07211590220754757,
+          0.0611243512146424,
+          0.05642826596667847,
+          0.07325370270658989,
+          0.04439801781439061,
+          0.05862755125483209,
+          0.052360672431917915,
+          0.0595243154306426,
+          0.061367762678738585
+        ]
+      }
+    }
+  ],
+  "depth_two_interpolated_warm_start": {
+    "ansatz": "xy",
+    "depth": 2,
+    "initialization": "linear_interpolation_from_depth_1",
+    "initial_parameters": [
+      4.5730518513674,
+      4.5730518513674,
+      1.6580561573246593,
+      1.6580561573246593
+    ],
+    "fit": {
+      "parameters": [
+        4.43611699285182,
+        5.137909572989189,
+        2.2233915990518596,
+        1.1860671738476507
+      ],
+      "optimizer": "COBYLA",
+      "objective_kind": "expectation",
+      "objective_value": 536.8630923911859,
+      "evaluations": 12,
+      "success": false,
+      "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "seed": 11,
+      "runtime_seconds": 2.562389599974267
+    },
+    "evaluation": {
+      "classification": {
+        "ideal_statevector": true,
+        "ideal_finite_shot_aer": true,
+        "noisy_finite_shot_aer": true,
+        "readout_mitigated_noisy_aer": true
+      },
+      "shots": 2048,
+      "seed": 2026,
+      "gate_noise_scale": 1.0,
+      "ideal_statevector_metrics": {
+        "feasible_probability_estimate": 0.7906342758473328,
+        "expected_objective_over_all_shots_feasible_only": 28.576761940465406,
+        "expected_objective_conditional_on_feasible": 36.14409697813736,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.4539170682108318,
+        "objective_gap_conditional_on_feasible": 3.3559030218626376,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0
+      },
+      "ideal_finite_shot_metrics": {
+        "feasible_probability_estimate": 0.79150390625,
+        "expected_objective_over_all_shots_feasible_only": 28.69677734375,
+        "expected_objective_conditional_on_feasible": 36.25601480567551,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.470703125,
+        "objective_gap_conditional_on_feasible": 3.2439851943244875,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0,
+        "best_feasible_measured_objective": 39.5
+      },
+      "noisy_finite_shot_metrics": {
+        "feasible_probability_estimate": 0.18798828125,
+        "expected_objective_over_all_shots_feasible_only": 6.17822265625,
+        "expected_objective_conditional_on_feasible": 32.86493506493507,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.064453125,
+        "objective_gap_conditional_on_feasible": 6.635064935064932,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0,
+        "best_feasible_measured_objective": 39.5
+      },
+      "noisy_readout_mitigated_quasi_metrics": {
+        "feasible_probability_estimate": 0.19178230953347486,
+        "expected_objective_over_all_shots_feasible_only": 6.297816236329508,
+        "expected_objective_conditional_on_feasible": 32.83835850996595,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.06509439153258474,
+        "objective_gap_conditional_on_feasible": 6.66164149003405,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0000000000000016
+      },
+      "noisy_readout_mitigated_projected_metrics": {
+        "feasible_probability_estimate": 0.19178230953347453,
+        "expected_objective_over_all_shots_feasible_only": 6.297816236329497,
+        "expected_objective_conditional_on_feasible": 32.83835850996595,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.06509439153258463,
+        "objective_gap_conditional_on_feasible": 6.66164149003405,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 0.9999999999999998,
+        "best_feasible_measured_objective": null
+      },
+      "readout_mitigation": {
+        "condition_number": 1.2937675132078057,
+        "negative_quasi_mass": -0.0,
+        "calibration_shots_per_prepared_state_per_qubit": 4096,
+        "calibration_runtime_seconds": 0.38911889999872074,
+        "mitigation_runtime_seconds": 0.0019192000036127865,
+        "bootstrap_feasibility_variance": {
+          "bootstrap_replicates": 100,
+          "raw_metric_variance": 7.842526291355942e-05,
+          "mitigated_metric_variance": 0.00010818741057346425,
+          "mitigation_variance_ratio": 1.3794969446606606,
+          "bootstrap_runtime_seconds": 0.07066149997990578
+        }
+      },
+      "runtime_seconds": {
+        "ideal_finite_shot_simulation": 0.10920840001199394,
+        "noisy_finite_shot_simulation": 37.46163279999746
+      },
+      "transpilation": {
+        "ideal_depth": 2611,
+        "noisy_depth": 2611,
+        "noisy_gate_counts": {
+          "cx": 1706,
+          "rz": 1237,
+          "sx": 216,
+          "x": 128,
+          "id": 4,
+          "measure": 4,
+          "barrier": 2
+        }
+      },
+      "raw_noisy_counts": {
+        "0011": 132,
+        "0110": 140,
+        "1111": 86,
+        "0100": 164,
+        "1101": 94,
+        "0000": 187,
+        "0101": 113,
+        "1001": 110,
+        "1011": 83,
+        "1000": 157,
+        "0111": 117,
+        "0010": 143,
+        "0001": 154,
+        "1010": 110,
+        "1100": 143,
+        "1110": 115
+      },
+      "resource_report": {
+        "logical_qubits": 4,
+        "physical_qubits_available": 7,
+        "physical_qubits_used": 4,
+        "initial_layout_logical_to_physical": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "coupling_map": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "basis_gates": [
+          "id",
+          "rz",
+          "sx",
+          "x",
+          "cx"
+        ],
+        "transpiled_depth": 2140,
+        "transpiled_total_gates": 2582,
+        "transpiled_one_qubit_gates": 1206,
+        "transpiled_two_qubit_gates": 1376,
+        "transpiled_gate_counts": {
+          "cx": 1376,
+          "rz": 960,
+          "sx": 191,
+          "x": 55
+        },
+        "routing_swap_count_before_basis_translation": 341,
+        "routing_transpiled_depth_before_basis_translation": 2002,
+        "compile_runtime_seconds": 0.1531946999602951,
+        "optimization_level": 1,
+        "seed_transpiler": 2026
+      }
+    }
+  },
+  "xy_mixer_connectivity_resource_comparison": [
+    {
+      "topology": "path",
+      "resource_report": {
+        "logical_qubits": 4,
+        "physical_qubits_available": 7,
+        "physical_qubits_used": 4,
+        "initial_layout_logical_to_physical": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "coupling_map": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "basis_gates": [
+          "id",
+          "rz",
+          "sx",
+          "x",
+          "cx"
+        ],
+        "transpiled_depth": 1091,
+        "transpiled_total_gates": 1308,
+        "transpiled_one_qubit_gates": 617,
+        "transpiled_two_qubit_gates": 691,
+        "transpiled_gate_counts": {
+          "cx": 691,
+          "rz": 489,
+          "sx": 101,
+          "x": 27
+        },
+        "routing_swap_count_before_basis_translation": 167,
+        "routing_transpiled_depth_before_basis_translation": 1010,
+        "compile_runtime_seconds": 0.3640109999687411,
+        "optimization_level": 1,
+        "seed_transpiler": 2026
+      }
+    },
+    {
+      "topology": "cycle",
+      "resource_report": {
+        "logical_qubits": 4,
+        "physical_qubits_available": 7,
+        "physical_qubits_used": 4,
+        "initial_layout_logical_to_physical": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "coupling_map": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "basis_gates": [
+          "id",
+          "rz",
+          "sx",
+          "x",
+          "cx"
+        ],
+        "transpiled_depth": 1106,
+        "transpiled_total_gates": 1332,
+        "transpiled_one_qubit_gates": 631,
+        "transpiled_two_qubit_gates": 701,
+        "transpiled_gate_counts": {
+          "cx": 701,
+          "rz": 497,
+          "sx": 107,
+          "x": 27
+        },
+        "routing_swap_count_before_basis_translation": 168,
+        "routing_transpiled_depth_before_basis_translation": 1029,
+        "compile_runtime_seconds": 0.2235596000100486,
+        "optimization_level": 1,
+        "seed_transpiler": 2026
+      }
+    },
+    {
+      "topology": "complete",
+      "resource_report": {
+        "logical_qubits": 4,
+        "physical_qubits_available": 7,
+        "physical_qubits_used": 4,
+        "initial_layout_logical_to_physical": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "coupling_map": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "basis_gates": [
+          "id",
+          "rz",
+          "sx",
+          "x",
+          "cx"
+        ],
+        "transpiled_depth": 1124,
+        "transpiled_total_gates": 1369,
+        "transpiled_one_qubit_gates": 657,
+        "transpiled_two_qubit_gates": 712,
+        "transpiled_gate_counts": {
+          "cx": 712,
+          "rz": 513,
+          "sx": 117,
+          "x": 27
+        },
+        "routing_swap_count_before_basis_translation": 170,
+        "routing_transpiled_depth_before_basis_translation": 1048,
+        "compile_runtime_seconds": 0.1767515999963507,
+        "optimization_level": 1,
+        "seed_transpiler": 2026
+      }
+    }
+  ],
+  "noise_optimized_spsa": {
+    "optimizer": "SPSA",
+    "objective": "expectation",
+    "noise_optimized": true,
+    "noise_profile": "illustrative_7q_line_v1",
+    "shots_per_objective_evaluation": 128,
+    "iterations": 8,
+    "objective_evaluations": 25,
+    "best_training_objective": 1636.125,
+    "parameters": [
+      4.385263486322475,
+      4.893331644320128
+    ],
+    "seed": 991,
+    "runtime_seconds": 40.9163486000034,
+    "termination": "fixed SPSA budget completed; not a convergence certificate",
+    "evaluation": {
+      "classification": {
+        "ideal_statevector": true,
+        "ideal_finite_shot_aer": true,
+        "noisy_finite_shot_aer": true,
+        "readout_mitigated_noisy_aer": true
+      },
+      "shots": 2048,
+      "seed": 2026,
+      "gate_noise_scale": 1.0,
+      "ideal_statevector_metrics": {
+        "feasible_probability_estimate": 0.556914881643485,
+        "expected_objective_over_all_shots_feasible_only": 19.308904038364343,
+        "expected_objective_conditional_on_feasible": 34.67119424315392,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.2401252956430362,
+        "objective_gap_conditional_on_feasible": 4.82880575684608,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0
+      },
+      "ideal_finite_shot_metrics": {
+        "feasible_probability_estimate": 0.54638671875,
+        "expected_objective_over_all_shots_feasible_only": 18.909912109375,
+        "expected_objective_conditional_on_feasible": 34.609025915996426,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.22900390625,
+        "objective_gap_conditional_on_feasible": 4.890974084003574,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0,
+        "best_feasible_measured_objective": 39.5
+      },
+      "noisy_finite_shot_metrics": {
+        "feasible_probability_estimate": 0.1845703125,
+        "expected_objective_over_all_shots_feasible_only": 6.0400390625,
+        "expected_objective_conditional_on_feasible": 32.72486772486773,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.0546875,
+        "objective_gap_conditional_on_feasible": 6.775132275132272,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0,
+        "best_feasible_measured_objective": 39.5
+      },
+      "noisy_readout_mitigated_quasi_metrics": {
+        "feasible_probability_estimate": 0.18900958996060374,
+        "expected_objective_over_all_shots_feasible_only": 6.172244267035271,
+        "expected_objective_conditional_on_feasible": 32.65572010564006,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.05393234316362147,
+        "objective_gap_conditional_on_feasible": 6.844279894359943,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0000000000000018
+      },
+      "noisy_readout_mitigated_projected_metrics": {
+        "feasible_probability_estimate": 0.1890095899606034,
+        "expected_objective_over_all_shots_feasible_only": 6.172244267035261,
+        "expected_objective_conditional_on_feasible": 32.655720105640064,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.05393234316362136,
+        "objective_gap_conditional_on_feasible": 6.844279894359936,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0,
+        "best_feasible_measured_objective": null
+      },
+      "readout_mitigation": {
+        "condition_number": 1.2937675132078057,
+        "negative_quasi_mass": -0.0,
+        "calibration_shots_per_prepared_state_per_qubit": 4096,
+        "calibration_runtime_seconds": 0.38911889999872074,
+        "mitigation_runtime_seconds": 0.0013670999906025827,
+        "bootstrap_feasibility_variance": {
+          "bootstrap_replicates": 100,
+          "raw_metric_variance": 8.335159282491663e-05,
+          "mitigated_metric_variance": 0.00011355867273984887,
+          "mitigation_variance_ratio": 1.3624055508859132,
+          "bootstrap_runtime_seconds": 0.0372703000321053
+        }
+      },
+      "runtime_seconds": {
+        "ideal_finite_shot_simulation": 0.08253690000856295,
+        "noisy_finite_shot_simulation": 18.006636500009336
+      },
+      "transpilation": {
+        "ideal_depth": 1326,
+        "noisy_depth": 1326,
+        "noisy_gate_counts": {
+          "cx": 851,
+          "rz": 637,
+          "sx": 120,
+          "x": 64,
+          "id": 4,
+          "measure": 4,
+          "barrier": 2
+        }
+      },
+      "raw_noisy_counts": {
+        "0001": 152,
+        "1001": 146,
+        "0101": 138,
+        "0011": 112,
+        "0100": 144,
+        "1011": 94,
+        "0010": 143,
+        "1000": 125,
+        "1101": 100,
+        "1100": 116,
+        "0111": 116,
+        "1010": 120,
+        "1111": 104,
+        "0000": 220,
+        "1110": 90,
+        "0110": 128
+      },
+      "resource_report": {
+        "logical_qubits": 4,
+        "physical_qubits_available": 7,
+        "physical_qubits_used": 4,
+        "initial_layout_logical_to_physical": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "coupling_map": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "basis_gates": [
+          "id",
+          "rz",
+          "sx",
+          "x",
+          "cx"
+        ],
+        "transpiled_depth": 1106,
+        "transpiled_total_gates": 1332,
+        "transpiled_one_qubit_gates": 631,
+        "transpiled_two_qubit_gates": 701,
+        "transpiled_gate_counts": {
+          "cx": 701,
+          "rz": 497,
+          "sx": 107,
+          "x": 27
+        },
+        "routing_swap_count_before_basis_translation": 168,
+        "routing_transpiled_depth_before_basis_translation": 1029,
+        "compile_runtime_seconds": 0.09774920000927523,
+        "optimization_level": 1,
+        "seed_transpiler": 2026
+      }
+    }
+  },
+  "noise_strength_sensitivity": [
+    {
+      "gate_noise_scale": 0.5,
+      "metrics": {
+        "feasible_probability_estimate": 0.1845703125,
+        "expected_objective_over_all_shots_feasible_only": 6.08447265625,
+        "expected_objective_conditional_on_feasible": 32.96560846560847,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.060546875,
+        "objective_gap_conditional_on_feasible": 6.534391534391531,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0
+      },
+      "shots": 2048,
+      "runtime_seconds": 21.727375900023617,
+      "transpiled_depth": 1326
+    },
+    {
+      "gate_noise_scale": 1.0,
+      "metrics": {
+        "feasible_probability_estimate": 0.19287109375,
+        "expected_objective_over_all_shots_feasible_only": 6.294921875,
+        "expected_objective_conditional_on_feasible": 32.63797468354431,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.05517578125,
+        "objective_gap_conditional_on_feasible": 6.862025316455693,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0
+      },
+      "shots": 2048,
+      "runtime_seconds": 24.338846199971158,
+      "transpiled_depth": 1326
+    },
+    {
+      "gate_noise_scale": 1.5,
+      "metrics": {
+        "feasible_probability_estimate": 0.1845703125,
+        "expected_objective_over_all_shots_feasible_only": 6.00830078125,
+        "expected_objective_conditional_on_feasible": 32.55291005291005,
+        "cvar_25_percent_feasible_objective": 39.5,
+        "exact_optimum_sampling_probability": 0.05322265625,
+        "objective_gap_conditional_on_feasible": 6.94708994708995,
+        "best_feasible_state_with_nonzero_estimated_mass": 39.5,
+        "distribution_sum": 1.0
+      },
+      "shots": 2048,
+      "runtime_seconds": 26.427899200003594,
+      "transpiled_depth": 1326
+    }
+  ],
+  "limitations": [
+    "The noise profile is a hypothetical illustrative backend, not retrieved calibration; no physical QPU was used.",
+    "Stage 2 experiment is a four-item synthetic binding-constraint instance, not a challenge-sized benchmark.",
+    "The exact cost phase is built from state-selective multi-controlled phase gates; transpiled swap/depth results expose its small-instance synthesis overhead.",
+    "SPSA completion at a fixed iteration limit does not certify convergence; report the endpoint and budget.",
+    "Readout mitigation is local assignment-matrix inversion plus simplex projection; it cannot correct coherent, crosstalk, or gate noise."
+  ]
+}

@@ -1,0 +1,9 @@
+stage2_iws_binding_development:
+  status: synthetic_binding_constraint_exact_sector_simulation
+  depth: 1
+  shots_per_iteration: 1024
+  total_shots_per_seed: 4096
+  inverse_temperature: 4.0
+  epsilon: 0.1
+  max_objective_evaluations: 100
+  random_seeds: [11, 23, 42]

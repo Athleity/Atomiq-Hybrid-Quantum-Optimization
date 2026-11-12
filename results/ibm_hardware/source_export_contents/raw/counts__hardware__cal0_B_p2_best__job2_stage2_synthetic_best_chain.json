@@ -1,0 +1,31 @@
+{
+  "label": "cal0_B_p2_best",
+  "source": "hardware",
+  "experiment": "calibration",
+  "layout_name": "best",
+  "shots": 8000,
+  "counts": {
+    "000000": 7623,
+    "000001": 237,
+    "000010": 44,
+    "100000": 38,
+    "001001": 1,
+    "001000": 32,
+    "010000": 22,
+    "000100": 2,
+    "110000": 1
+  },
+  "backend": "ibm_kingston",
+  "job_id": "dbqg5d1abdes73fo7o10",
+  "job_label": "job2_stage2_synthetic_best_chain",
+  "physical_qubits": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152
+  ],
+  "suppression": "none",
+  "notes": ""
+}

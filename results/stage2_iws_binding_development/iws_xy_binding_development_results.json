@@ -1,0 +1,271 @@
+{
+  "status": "completed_synthetic_binding_constraint_iws_diagnostic",
+  "method": "exact-K weighted Johnson IWS-XY with IF-style objective cost",
+  "instance_is_synthetic": true,
+  "stage1_or_challenge_data_read": false,
+  "candidate_count": 4,
+  "selected_count": 2,
+  "feasible_exact_cardinality_subsets": 3,
+  "total_exact_cardinality_subsets": 6,
+  "exact_optimum": 39.5,
+  "exact_optimum_ids": [
+    "SYN0",
+    "SYN1"
+  ],
+  "configuration": {
+    "status": "synthetic_binding_constraint_exact_sector_simulation",
+    "depth": 1,
+    "shots_per_iteration": 1024,
+    "total_shots_per_seed": 4096,
+    "inverse_temperature": 4.0,
+    "epsilon": 0.1,
+    "max_objective_evaluations": 100,
+    "random_seeds": [
+      11,
+      23,
+      42
+    ]
+  },
+  "runtime_seconds": 2.6423053999897093,
+  "results": [
+    {
+      "seed": 11,
+      "gamma": [
+        1.275642246704688
+      ],
+      "beta": [
+        2.9144310877041293
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "optimization_evaluations": 100,
+      "iterations": [
+        {
+          "iteration": 0,
+          "shots": 1024,
+          "expected_feasible_objective": 28.462174638205585,
+          "feasible_shot_rate": 0.796875,
+          "optimal_shot_rate": 0.525390625,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.9584506458211351,
+            0.8235170452183534,
+            0.19303230896051132,
+            0.025
+          ]
+        },
+        {
+          "iteration": 1,
+          "shots": 1024,
+          "expected_feasible_objective": 38.198461413240366,
+          "feasible_shot_rate": 0.9931640625,
+          "optimal_shot_rate": 0.865234375,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.975,
+            0.9281245395695914,
+            0.07187546043040835,
+            0.025
+          ]
+        },
+        {
+          "iteration": 2,
+          "shots": 1024,
+          "expected_feasible_objective": 39.09528451420894,
+          "feasible_shot_rate": 0.9970703125,
+          "optimal_shot_rate": 0.966796875,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.975,
+            0.975,
+            0.025000000000000248,
+            0.025
+          ]
+        },
+        {
+          "iteration": 3,
+          "shots": 1024,
+          "expected_feasible_objective": 39.2551580628642,
+          "feasible_shot_rate": 0.9951171875,
+          "optimal_shot_rate": 0.9921875,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.975,
+            0.975,
+            0.025000000000000248,
+            0.025
+          ]
+        }
+      ],
+      "total_shots": 4096,
+      "exact_optimum": 39.5,
+      "exact_optimal_ids": [
+        "SYN0",
+        "SYN1"
+      ],
+      "mixer_ground_energy": -0.9999999999999998,
+      "mixer_ground_overlap": 1.0
+    },
+    {
+      "seed": 23,
+      "gamma": [
+        4.842989598579968
+      ],
+      "beta": [
+        4.5689107822269115
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "optimization_evaluations": 100,
+      "iterations": [
+        {
+          "iteration": 0,
+          "shots": 1024,
+          "expected_feasible_objective": 32.84242978107381,
+          "feasible_shot_rate": 0.9912109375,
+          "optimal_shot_rate": 0.3369140625,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.8345609044737305,
+            0.7002413583092568,
+            0.4401977372170127,
+            0.025
+          ]
+        },
+        {
+          "iteration": 1,
+          "shots": 1024,
+          "expected_feasible_objective": 35.98097053472356,
+          "feasible_shot_rate": 0.9921875,
+          "optimal_shot_rate": 0.65234375,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.951896214667612,
+            0.837181077280658,
+            0.18592270805173006,
+            0.025
+          ]
+        },
+        {
+          "iteration": 2,
+          "shots": 1024,
+          "expected_feasible_objective": 38.691336226949595,
+          "feasible_shot_rate": 0.994140625,
+          "optimal_shot_rate": 0.9208984375,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.975,
+            0.9648909450499094,
+            0.03510905495009087,
+            0.025
+          ]
+        },
+        {
+          "iteration": 3,
+          "shots": 1024,
+          "expected_feasible_objective": 39.33795930575636,
+          "feasible_shot_rate": 0.9970703125,
+          "optimal_shot_rate": 0.9921875,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.975,
+            0.975,
+            0.025000000000000244,
+            0.025
+          ]
+        }
+      ],
+      "total_shots": 4096,
+      "exact_optimum": 39.5,
+      "exact_optimal_ids": [
+        "SYN0",
+        "SYN1"
+      ],
+      "mixer_ground_energy": -1.0,
+      "mixer_ground_overlap": 1.0
+    },
+    {
+      "seed": 42,
+      "gamma": [
+        5.107824199848211
+      ],
+      "beta": [
+        2.5808867796929906
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "optimization_evaluations": 100,
+      "iterations": [
+        {
+          "iteration": 0,
+          "shots": 1024,
+          "expected_feasible_objective": 30.40655854229477,
+          "feasible_shot_rate": 0.8193359375,
+          "optimal_shot_rate": 0.572265625,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.9600145107230723,
+            0.8509959505765331,
+            0.1639895387003948,
+            0.025
+          ]
+        },
+        {
+          "iteration": 1,
+          "shots": 1024,
+          "expected_feasible_objective": 38.578702960561664,
+          "feasible_shot_rate": 0.986328125,
+          "optimal_shot_rate": 0.908203125,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.975,
+            0.9581638657681977,
+            0.04183613423180218,
+            0.025
+          ]
+        },
+        {
+          "iteration": 2,
+          "shots": 1024,
+          "expected_feasible_objective": 39.23576185987558,
+          "feasible_shot_rate": 0.994140625,
+          "optimal_shot_rate": 0.9775390625,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.975,
+            0.975,
+            0.02500000000000025,
+            0.025
+          ]
+        },
+        {
+          "iteration": 3,
+          "shots": 1024,
+          "expected_feasible_objective": 39.288056098597416,
+          "feasible_shot_rate": 0.994140625,
+          "optimal_shot_rate": 0.9921875,
+          "best_feasible_objective": 39.5,
+          "marginal_probabilities": [
+            0.975,
+            0.975,
+            0.025000000000000244,
+            0.025
+          ]
+        }
+      ],
+      "total_shots": 4096,
+      "exact_optimum": 39.5,
+      "exact_optimal_ids": [
+        "SYN0",
+        "SYN1"
+      ],
+      "mixer_ground_energy": -0.9999999999999998,
+      "mixer_ground_overlap": 1.0
+    }
+  ],
+  "limitations": [
+    "The source paper's shallow one-hot hardware mixer is not retained by the exact-K Johnson graph generalization.",
+    "Exact compressed-sector simulation and ideal draws only; no finite-gate or noisy hardware simulation.",
+    "This tiny case is for correctness and method screening, not a generalization or quantum-advantage claim."
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "status": "completed_actual_challenge_stage2_exact_and_milp",
+  "candidate_source": "frozen Stage1_Test feature-only inference; labels not loaded",
+  "stage1_freeze_record": "results/stage1_classical/frozen_model.json",
+  "stage1_predictions_sha256": "7633df6aae6eb8fada7e0fe28623112f9ca20a9669ff9c1a6fadad91f6c5a5e1",
+  "candidate_pool": [
+    {
+      "rank": 1,
+      "customer_id": "C0081",
+      "probability": 0.5079798043273155
+    },
+    {
+      "rank": 2,
+      "customer_id": "C0031",
+      "probability": 0.38629123250240804
+    },
+    {
+      "rank": 3,
+      "customer_id": "C0079",
+      "probability": 0.28324279702612715
+    },
+    {
+      "rank": 4,
+      "customer_id": "C0183",
+      "probability": 0.19522460458863827
+    },
+    {
+      "rank": 5,
+      "customer_id": "C0028",
+      "probability": 0.1840456980818125
+    },
+    {
+      "rank": 6,
+      "customer_id": "C0378",
+      "probability": 0.1683568141699173
+    },
+    {
+      "rank": 7,
+      "customer_id": "C0327",
+      "probability": 0.15780000265136318
+    },
+    {
+      "rank": 8,
+      "customer_id": "C0338",
+      "probability": 0.15564042649226462
+    },
+    {
+      "rank": 9,
+      "customer_id": "C0112",
+      "probability": 0.15401067678763483
+    },
+    {
+      "rank": 10,
+      "customer_id": "C0050",
+      "probability": 0.15393710190655738
+    }
+  ],
+  "constraints": {
+    "candidate_count": 10,
+    "selected_count": 6,
+    "budget_limit": 25,
+    "capacity_limit": 22
+  },
+  "feasible_exact_six_subsets": 210,
+  "total_exact_six_subsets": 210,
+  "exact_enumeration_optimum": {
+    "customer_ids": [
+      "C0028",
+      "C0031",
+      "C0079",
+      "C0081",
+      "C0327",
+      "C0338"
+    ],
+    "objective": 16.1710314160765,
+    "total_contact_cost": 16,
+    "total_capacity": 15,
+    "feasible": true
+  },
+  "independent_scipy_milp": {
+    "customer_ids": [
+      "C0028",
+      "C0031",
+      "C0079",
+      "C0081",
+      "C0327",
+      "C0338"
+    ],
+    "objective": 16.1710314160765,
+    "total_contact_cost": 16,
+    "total_capacity": 15,
+    "feasible": true
+  },
+  "selection_csv": "results/stage2_final/actual_selected_six.csv",
+  "test_labels_requested_or_used": false
+}

@@ -1,0 +1,9 @@
+2026-11-11 17:04:47,022 INFO fit model=prior_baseline repeat=1 fold=1 train=200 validation=100 seed=10143
+2026-11-11 17:04:47,065 INFO fit model=logistic_unregularized repeat=1 fold=1 train=200 validation=100 seed=10144
+2026-11-11 17:04:47,254 INFO fit model=logistic_regularized repeat=1 fold=1 train=200 validation=100 seed=10145
+2026-11-11 17:04:48,321 INFO fit model=svm_linear repeat=1 fold=1 train=200 validation=100 seed=10146
+2026-11-11 17:04:49,018 INFO fit model=svm_rbf repeat=1 fold=1 train=200 validation=100 seed=10147
+2026-11-11 17:04:49,458 INFO fit model=random_forest repeat=1 fold=1 train=200 validation=100 seed=10148
+2026-11-11 17:04:55,146 INFO fit model=extra_trees repeat=1 fold=1 train=200 validation=100 seed=10149
+2026-11-11 17:05:01,301 INFO fit model=hist_gradient_boosting repeat=1 fold=1 train=200 validation=100 seed=10150
+2026-11-11 17:05:03,631 INFO fit model=catboost_native repeat=1 fold=1 train=200 validation=100 seed=10151

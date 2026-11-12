@@ -1,0 +1,10 @@
+[project]
+name = "atomiq-hackathon-2026"
+version = "0.1.0"
+description = "Reproducible hybrid quantum-classical term-deposit campaign challenge"
+requires-python = ">=3.12,<3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

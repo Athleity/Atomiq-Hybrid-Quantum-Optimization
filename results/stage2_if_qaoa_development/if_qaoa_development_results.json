@@ -1,0 +1,60 @@
+{
+  "status": "completed_synthetic_binding_constraint_diagnostic",
+  "method": "IF-QAOA with exact signed-integer QPE indicators, controlled objective phase, and uncomputation",
+  "constraint_semantics": "exactly two selected; budget <= 3; capacity <= 3",
+  "fixture_is_synthetic": true,
+  "stage1_data_or_test_data_read": false,
+  "candidate_count": 4,
+  "feasible_exact_cardinality_subsets": 3,
+  "total_exact_cardinality_subsets": 6,
+  "exact_optimum": 39.5,
+  "exact_optimum_ids": [
+    "SYN0",
+    "SYN1"
+  ],
+  "configuration": {
+    "status": "synthetic_binding_constraints_diagnostic",
+    "seed": 11,
+    "depth": 1,
+    "max_evaluations": 100,
+    "mixer_topology": "cycle",
+    "random_seeds": [
+      11
+    ],
+    "noise_model": null
+  },
+  "results": [
+    {
+      "seed": 11,
+      "parameters": {
+        "gamma": [
+          0.6159648382733584
+        ],
+        "beta": [
+          2.813078220146462
+        ]
+      },
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "objective_evaluations": 100,
+      "expected_feasible_objective": 19.672398273691677,
+      "feasible_probability": 0.6022624851709972,
+      "optimal_solution_probability": 0.28308938188037075,
+      "best_supported_feasible_objective": 39.5,
+      "logical_qubits": 12,
+      "circuit_depth": 334,
+      "gate_counts": {
+        "rz": 492,
+        "cx": 253,
+        "sx": 94,
+        "x": 4
+      }
+    }
+  ],
+  "limitations": [
+    "Tiny synthetic instance establishes oracle arithmetic and end-to-end circuit behavior; it is not a performance comparison on the challenge-sized instance.",
+    "No physical quantum hardware or noise model was used.",
+    "The four-item synthetic fixture is a correctness diagnostic only; it is not the challenge-sized candidate pool.",
+    "COBYLA reached the configured 100-evaluation cap; optimizer_success is false and this run is budget-truncated."
+  ]
+}

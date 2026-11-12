@@ -1,0 +1,276 @@
+{
+  "status": "completed_synthetic_binding_xy_control",
+  "instance_is_synthetic": true,
+  "stage1_or_challenge_data_read": false,
+  "candidate_count": 4,
+  "selected_count": 2,
+  "budget_limit": 3,
+  "capacity_limit": 3,
+  "feasible_exact_cardinality_subsets": 3,
+  "total_exact_cardinality_subsets": 6,
+  "exact_optimum": 39.5,
+  "exact_optimum_ids": [
+    "SYN0",
+    "SYN1"
+  ],
+  "configuration": {
+    "status": "synthetic_binding_constraint_control",
+    "depth": 1,
+    "max_objective_evaluations": 100,
+    "random_seeds": [
+      11,
+      23,
+      42
+    ],
+    "ideal_shots": 4096,
+    "illustrative_noisy_shots": 1024,
+    "noise_parameters": {
+      "depolarizing_1q_per_sx_x": 0.001,
+      "depolarizing_2q_per_cx": 0.01,
+      "symmetric_readout_error": 0.02,
+      "hardware_calibrated": false
+    }
+  },
+  "runtime_seconds": 9.584490100038238,
+  "noise_model_is_illustrative_not_hardware_calibrated": true,
+  "results": [
+    {
+      "seed": 11,
+      "gamma": [
+        0.7857385120608116
+      ],
+      "beta": [
+        2.0826765438079544
+      ],
+      "optimizer_success": true,
+      "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+      "objective_evaluations": 37,
+      "exact_expected_objective": 28.161553281111523,
+      "exact_feasible_probability": 0.8710280438810183,
+      "exact_optimal_solution_probability": 0.12850216907532708,
+      "approximation_gap": 0.2870492840224931,
+      "ideal_finite_shot": {
+        "shots": 4096,
+        "feasible_rate": 0.865966796875,
+        "optimal_selection_probability": 0.126708984375,
+        "best_sampled_feasible_objective": 39.5,
+        "raw_counts": {
+          "1100": 90,
+          "0011": 519,
+          "0110": 2199,
+          "1010": 150,
+          "1001": 309,
+          "0101": 829
+        }
+      },
+      "illustrative_noisy_finite_shot": {
+        "shots": 1024,
+        "feasible_rate": 0.58203125,
+        "optimal_selection_probability": 0.0947265625,
+        "best_sampled_feasible_objective": 39.5,
+        "raw_counts": {
+          "1001": 58,
+          "1010": 42,
+          "0101": 162,
+          "0110": 337,
+          "1011": 20,
+          "0010": 40,
+          "0100": 35,
+          "0000": 17,
+          "1111": 26,
+          "1000": 20,
+          "0011": 97,
+          "1101": 24,
+          "1100": 39,
+          "1110": 33,
+          "0111": 55,
+          "0001": 19
+        }
+      },
+      "resources": {
+        "logical_qubits": 4,
+        "ancilla_qubits": 0,
+        "logical_depth": 10,
+        "logical_operations": {
+          "rxx": 4,
+          "ryy": 4,
+          "state_preparation": 1,
+          "diagonal": 1
+        },
+        "transpiled_basis": [
+          "cx",
+          "rz",
+          "sx",
+          "x"
+        ],
+        "transpiled_depth": 165,
+        "transpiled_operations": {
+          "rz": 132,
+          "sx": 62,
+          "cx": 41
+        }
+      },
+      "state_norm": 1.0
+    },
+    {
+      "seed": 23,
+      "gamma": [
+        4.267243394284549
+      ],
+      "beta": [
+        3.5386761666466593
+      ],
+      "optimizer_success": true,
+      "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+      "objective_evaluations": 33,
+      "exact_expected_objective": 29.661156785131404,
+      "exact_feasible_probability": 0.8428664466283351,
+      "exact_optimal_solution_probability": 0.31701670104644053,
+      "approximation_gap": 0.2490846383511037,
+      "ideal_finite_shot": {
+        "shots": 4096,
+        "feasible_rate": 0.841796875,
+        "optimal_selection_probability": 0.31982421875,
+        "best_sampled_feasible_objective": 39.5,
+        "raw_counts": {
+          "0110": 1657,
+          "1100": 75,
+          "0011": 1310,
+          "0101": 481,
+          "1001": 273,
+          "1010": 300
+        }
+      },
+      "illustrative_noisy_finite_shot": {
+        "shots": 1024,
+        "feasible_rate": 0.5888671875,
+        "optimal_selection_probability": 0.2109375,
+        "best_sampled_feasible_objective": 39.5,
+        "raw_counts": {
+          "1101": 22,
+          "1111": 17,
+          "0110": 270,
+          "0101": 117,
+          "0011": 216,
+          "1001": 44,
+          "1000": 16,
+          "1011": 28,
+          "1110": 30,
+          "0000": 15,
+          "0111": 56,
+          "1100": 42,
+          "0010": 41,
+          "1010": 62,
+          "0001": 21,
+          "0100": 27
+        }
+      },
+      "resources": {
+        "logical_qubits": 4,
+        "ancilla_qubits": 0,
+        "logical_depth": 10,
+        "logical_operations": {
+          "rxx": 4,
+          "ryy": 4,
+          "state_preparation": 1,
+          "diagonal": 1
+        },
+        "transpiled_basis": [
+          "cx",
+          "rz",
+          "sx",
+          "x"
+        ],
+        "transpiled_depth": 165,
+        "transpiled_operations": {
+          "rz": 132,
+          "sx": 62,
+          "cx": 41
+        }
+      },
+      "state_norm": 0.9999999999999998
+    },
+    {
+      "seed": 42,
+      "gamma": [
+        5.385962355163172
+      ],
+      "beta": [
+        2.7478728273290893
+      ],
+      "optimizer_success": true,
+      "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+      "objective_evaluations": 28,
+      "exact_expected_objective": 30.032845884943818,
+      "exact_feasible_probability": 0.8100604574960044,
+      "exact_optimal_solution_probability": 0.373750776539421,
+      "approximation_gap": 0.23967478772294132,
+      "ideal_finite_shot": {
+        "shots": 4096,
+        "feasible_rate": 0.8154296875,
+        "optimal_selection_probability": 0.364013671875,
+        "best_sampled_feasible_objective": 39.5,
+        "raw_counts": {
+          "0110": 1470,
+          "1100": 58,
+          "0011": 1491,
+          "1010": 278,
+          "1001": 420,
+          "0101": 379
+        }
+      },
+      "illustrative_noisy_finite_shot": {
+        "shots": 1024,
+        "feasible_rate": 0.5576171875,
+        "optimal_selection_probability": 0.24609375,
+        "best_sampled_feasible_objective": 39.5,
+        "raw_counts": {
+          "1100": 35,
+          "0011": 252,
+          "1001": 70,
+          "1010": 67,
+          "0000": 13,
+          "1101": 20,
+          "0110": 233,
+          "0111": 54,
+          "1000": 24,
+          "0010": 39,
+          "0101": 86,
+          "1011": 34,
+          "0001": 21,
+          "0100": 27,
+          "1111": 22,
+          "1110": 27
+        }
+      },
+      "resources": {
+        "logical_qubits": 4,
+        "ancilla_qubits": 0,
+        "logical_depth": 10,
+        "logical_operations": {
+          "rxx": 4,
+          "ryy": 4,
+          "state_preparation": 1,
+          "diagonal": 1
+        },
+        "transpiled_basis": [
+          "cx",
+          "rz",
+          "sx",
+          "x"
+        ],
+        "transpiled_depth": 165,
+        "transpiled_operations": {
+          "rz": 132,
+          "sx": 62,
+          "cx": 41
+        }
+      },
+      "state_norm": 1.0
+    }
+  ],
+  "limitations": [
+    "Tiny four-candidate exact-simulation control only.",
+    "Illustrative Aer noise is a stress-test assumption, not device calibration."
+  ]
+}

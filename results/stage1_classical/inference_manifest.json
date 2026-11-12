@@ -1,0 +1,44 @@
+{
+  "status": "completed_inference_after_frozen_model",
+  "model_sha256": "9e8d6579279892471258b50378908db0c12a7211e07dda3063d425fdaec16446",
+  "training_partition_sha256": "cdd01f10485b7d92368a43ed54b2808193168e2276b7c483148d4f4d24cf9884",
+  "stage1_test_rows_scored": 100,
+  "stage1_test_columns_requested": [
+    "customer_id",
+    "age",
+    "balance",
+    "day",
+    "campaign",
+    "pdays",
+    "previous",
+    "job",
+    "marital",
+    "education",
+    "default",
+    "housing",
+    "loan",
+    "contact",
+    "month",
+    "poutcome"
+  ],
+  "test_labels_requested_or_loaded": false,
+  "test_data_used_for_selection_or_tuning": false,
+  "predictions_file": "results/stage1_classical/stage1_test_predictions.csv",
+  "predictions_sha256": "7633df6aae6eb8fada7e0fe28623112f9ca20a9669ff9c1a6fadad91f6c5a5e1",
+  "top_ten_customer_ids": [
+    "C0081",
+    "C0031",
+    "C0079",
+    "C0183",
+    "C0028",
+    "C0378",
+    "C0327",
+    "C0338",
+    "C0112",
+    "C0050"
+  ],
+  "probability_range": [
+    0.03677721128590462,
+    0.5079798043273155
+  ]
+}

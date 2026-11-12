@@ -1,0 +1,8 @@
+stage2_if_qaoa_development:
+  status: synthetic_binding_constraints_diagnostic
+  seed: 11
+  depth: 1
+  max_evaluations: 100
+  mixer_topology: cycle
+  random_seeds: [11]
+  noise_model: null

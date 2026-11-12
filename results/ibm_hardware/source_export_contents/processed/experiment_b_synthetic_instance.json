@@ -1,0 +1,68 @@
+{
+  "problem_is_synthetic": true,
+  "values": [
+    1.51,
+    1.95,
+    1.14,
+    1.95,
+    1.31,
+    1.42
+  ],
+  "neighbour_penalties": [
+    1.04,
+    0.67,
+    0.79,
+    0.32,
+    0.98
+  ],
+  "select_count": 3,
+  "optimal_outcome": 42,
+  "optimal_cost": -5.32,
+  "qaoa_layers": 1,
+  "gammas": [
+    5.138549739332542
+  ],
+  "betas": [
+    0.3139204643523497
+  ],
+  "depth_parameters": {
+    "1": {
+      "gammas": [
+        5.138549739332542
+      ],
+      "betas": [
+        0.3139204643523497
+      ]
+    },
+    "2": {
+      "gammas": [
+        1.224833492619636,
+        1.200060948108088e-05
+      ],
+      "betas": [
+        1.8496797774000644,
+        0.3952692142840045
+      ]
+    }
+  },
+  "hardware_depth_labels": {
+    "1": "B_p1_best",
+    "2": "B_p2_best"
+  },
+  "hardware_shots_per_depth": 30000,
+  "hardware_calibration_shots_per_state": 8000,
+  "ideal_metrics": {
+    "1": {
+      "feasibility": 1.0000000000000009,
+      "optimal_probability": 0.017621034046045377,
+      "approximation_ratio": 0.47625487014282636,
+      "regret": 1.2727006655529323
+    },
+    "2": {
+      "feasibility": 0.9999999999999996,
+      "optimal_probability": 0.006132343088702465,
+      "approximation_ratio": 0.6331956443866263,
+      "regret": 0.8913345841404983
+    }
+  }
+}

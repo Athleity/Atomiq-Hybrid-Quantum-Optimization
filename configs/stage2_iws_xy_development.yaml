@@ -1,0 +1,10 @@
+stage2_iws_xy_development:
+  status: development_only_exact_k_johnson_mixer_simulator
+  candidate_source: results/stage2_development/development_candidate_pool.csv
+  depth: 1
+  shots_per_iteration: 32
+  total_shots_per_seed: 128
+  inverse_temperature: 4.0
+  epsilon: 0.1
+  max_objective_evaluations: 100
+  random_seeds: [11, 23, 42]

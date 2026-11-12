@@ -1,0 +1,25 @@
+{
+  "model": "random_forest",
+  "calibration": "sigmoid",
+  "best_params": {
+    "model__class_weight": null,
+    "model__max_features": 0.5,
+    "model__min_samples_leaf": 4
+  },
+  "model_path": "results/stage1_classical/models/selected_model_calibrated.joblib",
+  "training_rows": 300,
+  "training_positive_count": 35,
+  "train_test_prediction_generated": false,
+  "selection_rule": "highest nested outer-fold mean PR-AUC; ties by lower Brier then log loss",
+  "outer_cv_calibrated_metrics": {
+    "roc_auc": 0.6079031182612643,
+    "pr_auc": 0.2275195611009446,
+    "precision_at_10": 0.21111111111111114,
+    "recall_at_10": 0.18097643097643096,
+    "brier_score": 0.10160361860427798,
+    "log_loss": 0.3541034115564986,
+    "ece_10_bins": 0.03284006738287514,
+    "calibration_intercept": 2.3133000345512027,
+    "calibration_slope": 2.162875295580517
+  }
+}

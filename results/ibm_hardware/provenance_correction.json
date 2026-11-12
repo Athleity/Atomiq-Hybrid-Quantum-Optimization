@@ -1,0 +1,53 @@
+{
+  "audit_status": "corrected canonical metadata; original source export preserved unchanged",
+  "stage3_job_id": "dbqfi99abdes73fo6vig",
+  "stage3_job_label": "job1_stage3_best_layout",
+  "correct_backend": "ibm_marrakesh",
+  "correct_physical_qubits": [
+    87,
+    6,
+    10,
+    139,
+    120,
+    107
+  ],
+  "incorrect_source_export_attribution": {
+    "backend": "ibm_kingston",
+    "physical_qubits": [
+      56,
+      149,
+      64,
+      118,
+      68,
+      17
+    ]
+  },
+  "reason": "The completed Stage 3 job was resumed into a registry using the currently selected Kingston backend and currently prepared best layout. Job identifiers persist across runtimes, but backend and physical-qubit provenance must come from the original submission. The earlier original submission record identifies this job as ibm_marrakesh on [87, 6, 10, 139, 120, 107].",
+  "unchanged_evidence": [
+    "job ID",
+    "raw measurement counts",
+    "8192 measured shots",
+    "5.0 seconds reconciled QPU usage",
+    "computed Stage 3 estimate"
+  ],
+  "qaoa_job": {
+    "job_id": "dbqg5d1abdes73fo7o10",
+    "backend": "ibm_kingston",
+    "physical_qubits": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "depths": [
+      1,
+      2
+    ],
+    "shots_per_depth": 30000,
+    "qpu_seconds": 26.0
+  },
+  "source_export_sha256": "dae9c5a214c958a8f15db9d991527209423116d10d64bbc8147efe6eb5338a53",
+  "classification": "The Stage 3 raw data and point estimate remain valid; only backend/layout attribution and any backend-specific calibration interpretation in the resumed export are invalid. Kingston backend calibration in the export describes the QAOA job, not the Stage 3 Marrakesh job."
+}

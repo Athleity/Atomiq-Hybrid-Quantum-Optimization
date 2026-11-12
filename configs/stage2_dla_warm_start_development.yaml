@@ -1,0 +1,9 @@
+stage2_dla_warm_start_development:
+  status: synthetic_binding_constraints_exact_simulation
+  development_instance: four_item_exact_two_with_both_inequalities
+  depth: 1
+  restricted_adam_steps: 100
+  full_adam_steps: 100
+  learning_rate: 0.04
+  random_seeds: [11, 23, 42]
+  parameterizations: [shared, multi]

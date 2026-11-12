@@ -1,0 +1,366 @@
+{
+  "status": "complete_development_only_exact_k_adaptation",
+  "method": "IWS-XY adaptation with weighted Johnson graph and paper-style Boltzmann marginal updates",
+  "exact_k_adaptation": "subset vertices are K-of-N bitstrings; graph edges swap one selected and one unselected item; per-edge warm-start XY block uses q=P(S)/(P(S)+P(T)); sum normalized by degree K(N-K)",
+  "mixer_ground_state": "sqrt(P(S)) is unique ground state at eigenvalue -1 for connected Johnson graph",
+  "source_paper_shallow_circuit_claim_applies": false,
+  "simulation_representation": "exact 210-dimensional cardinality-sector dense matrix evolution; not decomposed to a gate-level hardware circuit",
+  "stage1_frozen": false,
+  "stage1_test_sheet_or_labels_read": false,
+  "synthetic_constraints": false,
+  "candidate_count": 10,
+  "selected_count": 6,
+  "feasible_exact_cardinality_subsets": 210,
+  "total_exact_cardinality_subsets": 210,
+  "all_fixed_k_subsets_feasible": true,
+  "exact_optimum": 9.54561244282308,
+  "exact_optimum_ids": [
+    "C0073",
+    "C0094",
+    "C0130",
+    "C0159",
+    "C0217",
+    "C0329"
+  ],
+  "configuration": {
+    "status": "development_only_exact_k_johnson_mixer_simulator",
+    "candidate_source": "results/stage2_development/development_candidate_pool.csv",
+    "depth": 1,
+    "shots_per_iteration": 32,
+    "total_shots_per_seed": 128,
+    "inverse_temperature": 4.0,
+    "epsilon": 0.1,
+    "max_objective_evaluations": 100,
+    "random_seeds": [
+      11,
+      23,
+      42
+    ]
+  },
+  "runtime_seconds": 2.528352699999232,
+  "seeds": [
+    {
+      "seed": 11,
+      "gamma": [
+        0.8602997692233249
+      ],
+      "beta": [
+        5.205418008049767
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "optimization_evaluations": 100,
+      "iterations": [
+        {
+          "iteration": 0,
+          "shots": 32,
+          "expected_feasible_objective": 8.60928708447825,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 0.21875,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.9054786591380786,
+            0.8275080054822592,
+            0.01168863458458674,
+            0.02773689490453407,
+            0.6237713092421235,
+            0.9194209776202433,
+            0.8616809584813796,
+            0.01,
+            0.8313233707387211,
+            0.9813911898080729
+          ]
+        },
+        {
+          "iteration": 1,
+          "shots": 32,
+          "expected_feasible_objective": 9.357199073633392,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 0.40625,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.99,
+            0.9757358324828862,
+            0.01,
+            0.01,
+            0.06829092138160163,
+            0.99,
+            0.9803325972867312,
+            0.01,
+            0.9756406488487817,
+            0.99
+          ]
+        },
+        {
+          "iteration": 2,
+          "shots": 32,
+          "expected_feasible_objective": 9.54123805654869,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 1.0,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.99,
+            0.99,
+            0.015000000000000013,
+            0.015000000000000013,
+            0.015000000000000013,
+            0.99,
+            0.99,
+            0.015000000000000013,
+            0.99,
+            0.99
+          ]
+        },
+        {
+          "iteration": 3,
+          "shots": 32,
+          "expected_feasible_objective": 9.543245062766038,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 1.0,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.99,
+            0.99,
+            0.015000000000000013,
+            0.015000000000000013,
+            0.015000000000000013,
+            0.99,
+            0.99,
+            0.015000000000000013,
+            0.99,
+            0.99
+          ]
+        }
+      ],
+      "total_shots": 128,
+      "exact_optimum": 9.54561244282308,
+      "exact_optimal_ids": [
+        "C0073",
+        "C0094",
+        "C0130",
+        "C0159",
+        "C0217",
+        "C0329"
+      ],
+      "mixer_ground_energy": -0.9999999999999973,
+      "mixer_ground_overlap": 0.9999999999999991
+    },
+    {
+      "seed": 23,
+      "gamma": [
+        5.364943159959503
+      ],
+      "beta": [
+        6.283185307179586
+      ],
+      "optimizer_success": true,
+      "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+      "optimization_evaluations": 85,
+      "iterations": [
+        {
+          "iteration": 0,
+          "shots": 32,
+          "expected_feasible_objective": 6.18437364372318,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 0.0,
+          "best_feasible_objective": 8.10220032722436,
+          "marginal_probabilities": [
+            0.9432077382446916,
+            0.7449905041863544,
+            0.6201034131605144,
+            0.3395413143747559,
+            0.2054184446160559,
+            0.99,
+            0.7027323781913343,
+            0.103278385714572,
+            0.8382921442348575,
+            0.5124356772768638
+          ]
+        },
+        {
+          "iteration": 1,
+          "shots": 32,
+          "expected_feasible_objective": 7.021426264739888,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 0.0625,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.9790701617517559,
+            0.8583383038569398,
+            0.35143134883858274,
+            0.20606780513539386,
+            0.2254817653187777,
+            0.99,
+            0.8556693004072136,
+            0.05223587933403228,
+            0.9261227553735767,
+            0.5555826799837271
+          ]
+        },
+        {
+          "iteration": 2,
+          "shots": 32,
+          "expected_feasible_objective": 8.118028741218591,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 0.3125,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.99,
+            0.9087423861098791,
+            0.09156122456885936,
+            0.08336554073495904,
+            0.1374618160204163,
+            0.99,
+            0.9773133621983692,
+            0.02111303858327878,
+            0.9330020186106267,
+            0.8674406131736121
+          ]
+        },
+        {
+          "iteration": 3,
+          "shots": 32,
+          "expected_feasible_objective": 9.310462921220601,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 0.875,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.99,
+            0.99,
+            0.015587656985032958,
+            0.012326357822516853,
+            0.019759627369933752,
+            0.99,
+            0.99,
+            0.012326357822516853,
+            0.99,
+            0.99
+          ]
+        }
+      ],
+      "total_shots": 128,
+      "exact_optimum": 9.54561244282308,
+      "exact_optimal_ids": [
+        "C0073",
+        "C0094",
+        "C0130",
+        "C0159",
+        "C0217",
+        "C0329"
+      ],
+      "mixer_ground_energy": -1.0000000000000007,
+      "mixer_ground_overlap": 0.9999999999999991
+    },
+    {
+      "seed": 42,
+      "gamma": [
+        5.367129834784752
+      ],
+      "beta": [
+        6.283185307179586
+      ],
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "optimization_evaluations": 100,
+      "iterations": [
+        {
+          "iteration": 0,
+          "shots": 32,
+          "expected_feasible_objective": 6.184362549777897,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 0.03125,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.9457888796409941,
+            0.7341638445977088,
+            0.6617312228097663,
+            0.1382348334446024,
+            0.1879269372457223,
+            0.9816492064953782,
+            0.8656336999627511,
+            0.1821807806471182,
+            0.7659068414047487,
+            0.536783753751209
+          ]
+        },
+        {
+          "iteration": 1,
+          "shots": 32,
+          "expected_feasible_objective": 7.024314822209985,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 0.1875,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.99,
+            0.9853279751092439,
+            0.2679417832936009,
+            0.01,
+            0.061054902789592705,
+            0.99,
+            0.9533869076431749,
+            0.05667246636192354,
+            0.9038684803748105,
+            0.7817474844276522
+          ]
+        },
+        {
+          "iteration": 2,
+          "shots": 32,
+          "expected_feasible_objective": 9.035925237114135,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 0.75,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.99,
+            0.99,
+            0.01066145241173266,
+            0.01,
+            0.060137270560224845,
+            0.99,
+            0.99,
+            0.01,
+            0.9592012770280429,
+            0.99
+          ]
+        },
+        {
+          "iteration": 3,
+          "shots": 32,
+          "expected_feasible_objective": 9.53627466210974,
+          "feasible_shot_rate": 1.0,
+          "optimal_shot_rate": 1.0,
+          "best_feasible_objective": 9.54561244282308,
+          "marginal_probabilities": [
+            0.99,
+            0.99,
+            0.015000000000000013,
+            0.015000000000000013,
+            0.015000000000000013,
+            0.99,
+            0.99,
+            0.015000000000000013,
+            0.99,
+            0.99
+          ]
+        }
+      ],
+      "total_shots": 128,
+      "exact_optimum": 9.54561244282308,
+      "exact_optimal_ids": [
+        "C0073",
+        "C0094",
+        "C0130",
+        "C0159",
+        "C0217",
+        "C0329"
+      ],
+      "mixer_ground_energy": -0.9999999999999979,
+      "mixer_ground_overlap": 0.9999999999999991
+    }
+  ],
+  "limitations": [
+    "The exact-K Johnson-graph generalization is mathematically adapted from the paper's one-hot edge Hamiltonian, not an exact reproduction of its one-hot problem or shallow circuit.",
+    "The development pool has no binding budget/capacity constraints, so this experiment does not test constrained feasibility handling.",
+    "Dense compressed-sector simulation and ideal sampling do not estimate hardware gate noise or device runtime."
+  ]
+}

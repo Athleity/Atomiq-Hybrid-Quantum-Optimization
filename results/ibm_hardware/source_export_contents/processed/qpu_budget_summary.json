@@ -1,0 +1,12 @@
+{
+  "manual_remaining_seconds": null,
+  "account_remaining_seconds": 595.0,
+  "balance_used_for_planning": 595.0,
+  "balance_known": true,
+  "reserve_seconds": 178.5,
+  "counted_used_seconds": 31.0,
+  "spendable_seconds": 385.5,
+  "cost_scale": 1.0,
+  "uncertainty_factor": 2.0,
+  "balance_includes_previous_jobs": false
+}
